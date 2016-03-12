@@ -5,7 +5,8 @@ import { changeYear, changeMonth, changeDay } from '../../actions/actionCreators
 import OptionsGrid from '../OptionsGrid';
 import Modal from 'boron/DropModal';
 import moment from 'moment';
-import {pastPresentFuture} from '../../utils/time';
+import Results from '../Results';
+import Selection from '../Selection';
 
 const Home = React.createClass ({
   nextStep: function(ev) {
@@ -62,56 +63,6 @@ const Home = React.createClass ({
     }
     return buttons;
   },
-  showNth: function(type) {
-    const data = this.props.data,
-          birthday = moment().year(data.year).month(data.month).date(data.day),
-          offset = parseInt(type, 10);
-
-    let result = [],
-        date;
-
-    //Oldest person: 122 years 164 days (https://en.wikipedia.org/wiki/List_of_the_verified_oldest_people)
-
-    if (offset) {
-      // Fixed range of days: 10000, 5000, ...
-      let daysAmount;
-      for (let i = 1; i < 10; i++) {
-        daysAmount = offset * i;
-        date = birthday.clone().add(daysAmount, 'days');
-
-        result.push(
-          <div className={"data-result " + pastPresentFuture(date)} key={i}>
-            {daysAmount}:&nbsp;
-            {date.format("dddd, MMMM Do YYYY, h:mm:ss a")}
-          </div>
-        );
-      }
-    } else {
-      // Repdigit range of days: 1111, 2222 ... 11111, 22222 ...
-      let values = [1111, 11111],
-          daysAmount,
-          key = 1;
-
-      for (let i = 0; i < values.length; i++) {
-        daysAmount = values[i];
-        while (daysAmount <= values[i] * 9) {
-          date = birthday.clone().add(daysAmount, 'days');
-          result.push(
-            <div className={"data-result " + pastPresentFuture(date)} key={key}>
-              {daysAmount}
-              :&nbsp;
-              {date.format("dddd, MMMM Do YYYY, h:mm:ss a")
-              }
-            </div>
-          );
-          daysAmount += values[i];
-          key++;
-        }
-      }
-    }
-
-    return result;
-  },
   render: function() {
     return (
       <div>
@@ -126,7 +77,7 @@ const Home = React.createClass ({
             type="text"
             placeholder="2016"
           />
-        <button className="year-button" onClick={this.nextStep}>Next</button>
+          <button className="year-button" onClick={this.nextStep}>Next</button>
         </Modal>
         <Modal ref="monthmodal">
           <h2>What about the MONTH?</h2>
@@ -136,18 +87,8 @@ const Home = React.createClass ({
           <h2>DAY?</h2>
           {this.generateDays()}
         </Modal>
-        <div>
-          <div>Year: {this.props.data.year}</div>
-          <div>Month: {this.props.data.month}</div>
-          <div>Day: {this.props.data.day}</div>
-          <div>Range: {this.props.data.range}</div>
-        </div>
-        <div>
-          {this.props.data.range}
-          <div>
-            <span>{this.showNth(this.props.data.range)}</span>
-          </div>
-        </div>
+        <Selection data={this.props.data}></Selection>
+        <Results data={this.props.data}></Results>
         <Link className="btn" to="/about">About</Link>
       </div>
     );
