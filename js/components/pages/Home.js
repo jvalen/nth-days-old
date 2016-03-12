@@ -5,6 +5,7 @@ import { changeYear, changeMonth, changeDay } from '../../actions/actionCreators
 import OptionsGrid from '../OptionsGrid';
 import Modal from 'boron/DropModal';
 import moment from 'moment';
+import {pastPresentFuture} from '../../utils/time';
 
 const Home = React.createClass ({
   nextStep: function(ev) {
@@ -22,7 +23,6 @@ const Home = React.createClass ({
         this.refs.daymodal.show();
         break;
       case 'day-button':
-        console.log(parseInt(ev.target.getAttribute('value'), 10));
         this.props.dispatch(changeDay(parseInt(ev.target.getAttribute('value'), 10)));
         this.refs.daymodal.hide();
         break;
@@ -63,38 +63,50 @@ const Home = React.createClass ({
     return buttons;
   },
   showNth: function(type) {
-    const data = this.props.data;
-    const birthDay = moment().year(data.year).month(data.month).date(data.day);
-    const offset = parseInt(type, 10);
-    let result = [];
+    const data = this.props.data,
+          birthday = moment().year(data.year).month(data.month).date(data.day),
+          offset = parseInt(type, 10);
+
+    let result = [],
+        date;
+
+    //Oldest person: 122 years 164 days (https://en.wikipedia.org/wiki/List_of_the_verified_oldest_people)
 
     if (offset) {
+      // Fixed range of days: 10000, 5000, ...
+      let daysAmount;
       for (let i = 1; i < 10; i++) {
-        result.push(<div key={i}>
-          {offset * i}:&nbsp;
-          {birthDay.add(offset, 'days').format("dddd, MMMM Do YYYY, h:mm:ss a")}
-        </div>
+        daysAmount = offset * i;
+        date = birthday.clone().add(daysAmount, 'days');
+
+        result.push(
+          <div className={"data-result " + pastPresentFuture(date)} key={i}>
+            {daysAmount}:&nbsp;
+            {date.format("dddd, MMMM Do YYYY, h:mm:ss a")}
+          </div>
         );
       }
     } else {
-      // Show days with the same numbers
+      // Repdigit range of days: 1111, 2222 ... 11111, 22222 ...
       let values = [1111, 11111],
-          currentValue,
+          daysAmount,
           key = 1;
 
       for (let i = 0; i < values.length; i++) {
-        currentValue = values[i];
-        while (key % 10 !== 0 ) {
-          result.push(<div key={key}>
-            {currentValue * (key % 10)}:&nbsp;
-            {birthDay.add(values[i], 'days').format("dddd, MMMM Do YYYY, h:mm:ss a")}
-          </div>
+        daysAmount = values[i];
+        while (daysAmount <= values[i] * 9) {
+          date = birthday.clone().add(daysAmount, 'days');
+          result.push(
+            <div className={"data-result " + pastPresentFuture(date)} key={key}>
+              {daysAmount}
+              :&nbsp;
+              {date.format("dddd, MMMM Do YYYY, h:mm:ss a")
+              }
+            </div>
           );
+          daysAmount += values[i];
           key++;
         }
-        // Set the next range (i.e: from 9999 to 11111)
-        {birthDay.add(values[i] + 1, 'days').format("dddd, MMMM Do YYYY, h:mm:ss a")}
-        key++;
       }
     }
 

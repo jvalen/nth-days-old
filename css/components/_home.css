@@ -1,6 +1,6 @@
 .wrapper {
   padding: 1em;
-  background-color: #E8DDDD;
+  background-color: #f2efe8;
   color: #222222;
   text-align: center;
   max-width: 978px;
@@ -42,4 +42,14 @@
   transform: translate(0px,5px);
   -webkit-transform: translate(0px,5px);
   border-bottom: 1px solid;
+}
+
+.past {
+  background-color: #b0aac2;
+}
+.present {
+  background-color: #c2d4d8;
+}
+.future {
+  background-color: #dbe9d8;
 }
