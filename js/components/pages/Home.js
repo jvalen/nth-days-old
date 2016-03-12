@@ -64,8 +64,19 @@ const Home = React.createClass ({
   showNth: function(offset) {
     const data = this.props.data;
     const birthDay = moment().year(data.year).month(data.month).date(data.day);
-    return [birthDay.add(offset, 'days').format("dddd, MMMM Do YYYY, h:mm:ss a")];
-    // return birthDay;
+    let result = [];
+
+
+    for (var i = 1; i <= 5; i++) {
+    console.log(birthDay.format());
+      result.push(<div key={i}>
+        {offset * i}:&nbsp;
+        {birthDay.add(offset, 'days').format("dddd, MMMM Do YYYY, h:mm:ss a")}
+      </div>
+      );
+    }
+
+    return result;
   },
   render: function() {
     return (
