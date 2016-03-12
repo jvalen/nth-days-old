@@ -27,6 +27,10 @@ function homeReducer(state = initialState, action) {
       return assignToEmpty(state, {
         day: action.day
       });
+    case 'CHANGE_RANGE':
+      return assignToEmpty(state, {
+        range: action.range
+      });
     default:
       return state;
   }

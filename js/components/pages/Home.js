@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import { changeYear, changeMonth, changeDay } from '../../actions/actionCreators';
+import OptionsGrid from '../OptionsGrid';
 import Modal from 'boron/DropModal';
 import moment from 'moment';
 
@@ -61,19 +62,40 @@ const Home = React.createClass ({
     }
     return buttons;
   },
-  showNth: function(offset) {
+  showNth: function(type) {
     const data = this.props.data;
     const birthDay = moment().year(data.year).month(data.month).date(data.day);
+    const offset = parseInt(type, 10);
     let result = [];
 
+    if (offset) {
+      for (let i = 1; i < 10; i++) {
+        result.push(<div key={i}>
+          {offset * i}:&nbsp;
+          {birthDay.add(offset, 'days').format("dddd, MMMM Do YYYY, h:mm:ss a")}
+        </div>
+        );
+      }
+    } else {
+      // Show days with the same numbers
+      let values = [1111, 11111],
+          currentValue,
+          key = 1;
 
-    for (var i = 1; i <= 5; i++) {
-    console.log(birthDay.format());
-      result.push(<div key={i}>
-        {offset * i}:&nbsp;
-        {birthDay.add(offset, 'days').format("dddd, MMMM Do YYYY, h:mm:ss a")}
-      </div>
-      );
+      for (let i = 0; i < values.length; i++) {
+        currentValue = values[i];
+        while (key % 10 !== 0 ) {
+          result.push(<div key={key}>
+            {currentValue * (key % 10)}:&nbsp;
+            {birthDay.add(values[i], 'days').format("dddd, MMMM Do YYYY, h:mm:ss a")}
+          </div>
+          );
+          key++;
+        }
+        // Set the next range (i.e: from 9999 to 11111)
+        {birthDay.add(values[i] + 1, 'days').format("dddd, MMMM Do YYYY, h:mm:ss a")}
+        key++;
+      }
     }
 
     return result;
@@ -83,6 +105,7 @@ const Home = React.createClass ({
       <div>
         <h1>{ this.props.data.title }</h1>
         <button onClick={this.clickHandler}>Start</button>
+        <OptionsGrid></OptionsGrid>
         <Modal ref="yearmodal">
           <h2>What YEAR were you born in?</h2>
           <input
@@ -105,6 +128,7 @@ const Home = React.createClass ({
           <div>Year: {this.props.data.year}</div>
           <div>Month: {this.props.data.month}</div>
           <div>Day: {this.props.data.day}</div>
+          <div>Range: {this.props.data.range}</div>
         </div>
         <div>
           {this.props.data.range}

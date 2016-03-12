@@ -17,3 +17,7 @@ export function changeMonth(month) {
 export function changeDay(day) {
   return { type: 'CHANGE_DAY', day };
 }
+export function changeRange(range) {
+  console.log('action:', range);
+  return { type: 'CHANGE_RANGE', range };
+}
