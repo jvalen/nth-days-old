@@ -1,5 +1,5 @@
 import React from 'react';
-import OptionsGrid from './OptionsGrid';
+import Options from './Options';
 import Matches from './Matches';
 import Selection from './Selection';
 
@@ -7,7 +7,7 @@ import Selection from './Selection';
 const Results = function (props) {
   return (
     <div>
-      <OptionsGrid></OptionsGrid>
+      <Options></Options>
       <Selection data={props.data}></Selection>
       <Matches data={props.data}></Matches>
     </div>
