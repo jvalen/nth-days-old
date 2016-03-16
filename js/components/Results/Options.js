@@ -13,17 +13,17 @@ const Options = function (props) {
 
     for (let i = 0; i < fixedValues.length; i++) {
       options.push(
-        <span className="option-wrapper" key={i}>
+        <span className="options__item-wrapper" key={i}>
           <input
             id={ 'option-' + i }
-            className="radio-options__input"
+            className="options__radio-input"
             type="radio"
             name="radio-options"
             value={fixedValues[i].value}
             onChange={() => props.dispatch(changeRange(fixedValues[i].value))}
             defaultChecked={ i === 0 ? true : false }
           />
-        <label className="radio-options__label" htmlFor={ 'option-' + i }>
+        <label className="options__radio-label" htmlFor={ 'option-' + i }>
             { fixedValues[i].label }
           </label>
         </span>
@@ -33,8 +33,8 @@ const Options = function (props) {
     return options;
   };
   return (
-    <div>
-      <fieldset>
+    <div className="options">
+      <fieldset className="options__fieldset">
         {generateOptions()}
       </fieldset>
     </div>

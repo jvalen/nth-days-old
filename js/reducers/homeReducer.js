@@ -1,7 +1,6 @@
 import assignToEmpty from '../utils/assign';
 
 const initialState = {
-  title: 'nth days old',
   range: 10000,
   year: 0,
   month: 0,

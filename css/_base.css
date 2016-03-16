@@ -16,3 +16,8 @@ body {
 h1 {
   margin: 0;
 }
+
+header {
+  padding: 1em 0;
+  background-color: $purple-dark-color;
+}

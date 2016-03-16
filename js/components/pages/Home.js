@@ -6,12 +6,9 @@ import NthDaysOld from '../NthDaysOld';
 const Home = React.createClass ({
   render: function() {
     return (
-      <div>
-        <header>
-          <h1>{ this.props.data.title }</h1>
-        </header>
+      <div className="home">
         <NthDaysOld></NthDaysOld>
-        <Link className="btn" to="/about">About</Link>
+        <Link className="home__btn--router" to="/about">About</Link>
       </div>
     );
   }

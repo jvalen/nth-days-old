@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 
 const App = function (props) {
   return (
-    <div className="wrapper">
+    <div className="main__wrapper">
+      <header>
+        <h1>nth days old</h1>
+      </header>
       { props.children }
     </div>
   );

@@ -1,4 +1,4 @@
-fieldset {
+.options__fieldset {
   border: none;
   padding: 0;
   margin: 0;
@@ -6,37 +6,37 @@ fieldset {
   margin: 1em;
 }
 
-fieldset span:first-child {
+.options__item-wrapper:first-child {
   border-left: 1px solid white;
 }
-fieldset span:last-child {
+.options__item-wrapper:last-child {
   border-right: 1px solid white;
 }
 
-span.option-wrapper {
+.options__item-wrapper {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   padding: 0.5rem 0;
 }
 
-.radio-options__input {
+.options__radio-input {
     display: none;
 }
 
-.radio-options__label {
+.options__radio-label {
     padding: 0.5rem 1rem;
     display: inline-block;
     transition: all .2s;
     color: white;
 }
 
-.radio-options__input:checked + .radio-options__label {
+.options__radio-input:checked + .options__radio-label {
     background: white;
     color: black;
     text-shadow: 0 0 1px rgba(0,0,0,.7);
 }
 
-.radio-options__input:focus + .radio-options__label {
+.options__radio-input:focus + .options__radio-label {
     outline-color: #4D90FE;
     outline-offset: -2px;
     outline-style: auto;

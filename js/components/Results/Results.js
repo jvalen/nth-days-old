@@ -6,7 +6,7 @@ import Selection from './Selection';
 
 const Results = function (props) {
   return (
-    <div className="results-wrapper">
+    <div className="results">
       <Options></Options>
       <Selection data={props.data}></Selection>
       <Matches data={props.data}></Matches>

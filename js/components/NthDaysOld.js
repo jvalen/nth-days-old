@@ -61,7 +61,7 @@ const NthDaysOld = React.createClass ({
   render: function() {
     return (
       <div className="nth-wrapper">
-        <button onClick={this.clickHandler}>Start</button>
+        <button className="nthDaysOld__start-button" onClick={this.clickHandler}>Start</button>
         <Modal ref="yearmodal">
           <h2>What YEAR were you born in?</h2>
           <input

@@ -18,7 +18,7 @@ const Matches = function (props) {
         date = birthday.clone().add(daysAmount, 'days');
 
         result.push(
-          <div className={"data-result " + pastPresentFuture(date)} key={i}>
+          <div className={ "matches__result matches__result--" + pastPresentFuture(date)} key={i}>
             {daysAmount}:&nbsp;
             {date.format("dddd, MMMM Do YYYY")}
           </div>
@@ -35,7 +35,7 @@ const Matches = function (props) {
         while (daysAmount <= values[i] * 9) {
           date = birthday.clone().add(daysAmount, 'days');
           result.push(
-            <div className={"data-result " + pastPresentFuture(date)} key={key}>
+            <div className={ "matches__result matches__result--" + pastPresentFuture(date)} key={key}>
               {daysAmount}
               :&nbsp;
               {date.format("dddd, MMMM Do YYYY")
@@ -52,7 +52,7 @@ const Matches = function (props) {
   };
 
   return (
-    <div>
+    <div className="matches">
       {props.data.range}
       <div>
         <span>{showNth(props.data)}</span>
