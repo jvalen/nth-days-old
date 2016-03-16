@@ -1,10 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { changeYear, changeMonth, changeDay } from '../actions/actionCreators';
-import OptionsGrid from './OptionsGrid';
 import Modal from 'boron/DropModal';
-import Results from './Results';
-import Selection from './Selection';
+import Results from './Results/Results';
 import moment from 'moment';
 
 const NthDaysOld = React.createClass ({
@@ -29,9 +27,7 @@ const NthDaysOld = React.createClass ({
     }
   },
   clickHandler: function() {
-    if (this.props.data.year === 0) {
-      this.refs.yearmodal.show();
-    }
+    this.refs.yearmodal.show();
   },
   generateMonths: function() {
     const months = moment.months();
@@ -66,7 +62,6 @@ const NthDaysOld = React.createClass ({
     return (
       <div className="nth-wrapper">
         <button onClick={this.clickHandler}>Start</button>
-        <OptionsGrid></OptionsGrid>
         <Modal ref="yearmodal">
           <h2>What YEAR were you born in?</h2>
           <input
@@ -85,8 +80,9 @@ const NthDaysOld = React.createClass ({
           <h2>DAY?</h2>
           {this.generateDays()}
         </Modal>
-        <Selection data={this.props.data}></Selection>
-        <Results data={this.props.data}></Results>
+        { this.props.data.day !== 0 ?
+          <Results data={this.props.data}></Results> : null
+        }
       </div>
     );
   }

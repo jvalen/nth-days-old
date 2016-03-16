@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeRange } from '../actions/actionCreators';
+import { changeRange } from '../../actions/actionCreators';
 
 const OptionsGrid = function (props) {
   const generateOptions = function() {

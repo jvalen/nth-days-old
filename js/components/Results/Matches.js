@@ -1,8 +1,8 @@
 import React from 'react';
-import { pastPresentFuture } from '../utils/time';
+import { pastPresentFuture } from '../../utils/time';
 import moment from 'moment';
 
-const Results = function (props) {
+const Matches = function (props) {
   const showNth = function(data) {
     const birthday = moment().year(data.year).month(data.month).date(data.day),
           offset = parseInt(data.range, 10);
@@ -61,4 +61,4 @@ const Results = function (props) {
   );
 };
 
-export default Results;
+export default Matches;
