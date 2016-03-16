@@ -13,7 +13,7 @@ const Options = function (props) {
 
     for (let i = 0; i < fixedValues.length; i++) {
       options.push(
-        <span key={i}>
+        <span className="option-wrapper" key={i}>
           <input
             id={ 'option-' + i }
             className="radio-options__input"

@@ -3,6 +3,20 @@ fieldset {
   padding: 0;
   margin: 0;
   text-align: center;
+  margin: 1em;
+}
+
+fieldset span:first-child {
+  border-left: 1px solid white;
+}
+fieldset span:last-child {
+  border-right: 1px solid white;
+}
+
+span.option-wrapper {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 0.5rem 0;
 }
 
 .radio-options__input {
@@ -10,16 +24,15 @@ fieldset {
 }
 
 .radio-options__label {
-    display: inline-block;
     padding: 0.5rem 1rem;
-    margin-right: 18px;
-    border-radius: 3px;
+    display: inline-block;
     transition: all .2s;
+    color: white;
 }
 
 .radio-options__input:checked + .radio-options__label {
-    background: #B54A4A;
-    color: #fff;
+    background: white;
+    color: black;
     text-shadow: 0 0 1px rgba(0,0,0,.7);
 }
 
