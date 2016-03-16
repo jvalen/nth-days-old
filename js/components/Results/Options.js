@@ -21,6 +21,7 @@ const Options = function (props) {
             name="options-radio"
             value={fixedValues[i].value}
             onChange={() => props.dispatch(changeRange(fixedValues[i].value))}
+            defaultChecked={ i === 0 ? true : false }
           />
         <label className="radio-options__label" htmlFor={ 'option-' + i }>
             { fixedValues[i].label }
