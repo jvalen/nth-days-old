@@ -10,17 +10,17 @@ const NthDaysOld = React.createClass ({
     const className = ev.target.getAttribute('class');
 
     switch (className) {
-      case 'year-button':
+      case 'nthDaysOld__button--year':
         this.props.dispatch(changeYear(parseInt(this.refs.yearinput.value, 10)));
         this.refs.yearmodal.hide();
         this.refs.monthmodal.show();
         break;
-      case 'month-button':
+      case 'nthDaysOld__button--month':
         this.props.dispatch(changeMonth(ev.target.getAttribute('value')));
         this.refs.monthmodal.hide();
         this.refs.daymodal.show();
         break;
-      case 'day-button':
+      case 'nthDaysOld__button--day':
         this.props.dispatch(changeDay(parseInt(ev.target.getAttribute('value'), 10)));
         this.refs.daymodal.hide();
         break;
@@ -33,7 +33,7 @@ const NthDaysOld = React.createClass ({
     const months = moment.months();
     return months.reduce((accu, elem, index) => {
       accu.push(<button
-        className="month-button"
+        className="nthDaysOld__button--month"
         onClick={this.nextStep}
         key={index}
         value={elem}>
@@ -48,7 +48,7 @@ const NthDaysOld = React.createClass ({
     const buttons = [];
     for (var i = 1; i <= days; i++) {
       buttons.push(<button
-        className="day-button"
+        className="nthDaysOld__button--day"
         onClick={this.nextStep}
         key={i}
         value={i}>
@@ -60,17 +60,21 @@ const NthDaysOld = React.createClass ({
   },
   render: function() {
     return (
-      <div className="nth-wrapper">
-        <button className="nthDaysOld__start-button" onClick={this.clickHandler}>Start</button>
+      <div className="nthDaysOld">
+        <button
+          className="nthDaysOld__button--start"
+          onClick={this.clickHandler}>
+            Start
+        </button>
         <Modal ref="yearmodal">
           <h2>What YEAR were you born in?</h2>
           <input
             ref="yearinput"
-            className="home__input"
+            className="nthDaysOld__modal-input"
             type="text"
             placeholder="2016"
           />
-          <button className="year-button" onClick={this.nextStep}>Next</button>
+        <button className="nthDaysOld__button--year" onClick={this.nextStep}>Next</button>
         </Modal>
         <Modal ref="monthmodal">
           <h2>What about the MONTH?</h2>

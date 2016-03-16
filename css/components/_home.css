@@ -4,15 +4,6 @@
   margin: 1em 0;
 }
 
-.home__input {
-  margin-left: 0.5em;
-  border-radius: 2px;
-  border-width: 1px;
-  border-color: grey;
-  padding: 0.3em;
-  text-align: center;
-}
-
 .home__btn--router {
   display: block;
   padding: 1em;
