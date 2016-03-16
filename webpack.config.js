@@ -90,8 +90,10 @@ module.exports = function(options) {
               files.forEach(this.addDependency);
           }.bind(this)
         }),
+        require('postcss-mixins')(),
         require('postcss-simple-vars')(),
         require('postcss-focus')(),
+        require('postcss-nested')(),
         require('autoprefixer')({
           browsers: ['last 2 versions', 'IE > 8']
         }),

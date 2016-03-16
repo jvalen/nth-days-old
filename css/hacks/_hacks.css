@@ -1,0 +1,29 @@
+/* Extracted from https://github.com/IanLunn/Hover/wiki/Hacks-Explained */
+
+@define-mixin hardwareAccel() {
+  /* Improve performance on mobile/tablet devices */
+  transform: translateZ(0));
+}
+
+@define-mixin improveAntiAlias() {
+  /* Improve aliasing on mobile/tablet devices */
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+@define-mixin fontSmooth() {
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@define-mixin forceBlockLevel() {
+  /* Transforms need to be block-level to work */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@define-mixin hacks() {
+  @mixin forceBlockLevel();
+  @mixin hardwareAccel();
+  @mixin improveAntiAlias();
+  @mixin fontSmooth();
+}

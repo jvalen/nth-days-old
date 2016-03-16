@@ -57,6 +57,8 @@
     "postcss-focus": "^1.0.0",
     "postcss-import": "^7.0.0",
     "postcss-loader": "^0.8.0",
+    "postcss-mixins": "^4.0.1",
+    "postcss-nested": "^1.0.0",
     "postcss-reporter": "^1.2.1",
     "postcss-simple-vars": "^1.0.0",
     "react-transform-hmr": "^1.0.1",

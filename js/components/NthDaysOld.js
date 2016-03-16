@@ -62,7 +62,7 @@ const NthDaysOld = React.createClass ({
     return (
       <div className="nthDaysOld">
         <button
-          className="nthDaysOld__button--start"
+          className="nthDaysOld__button--start fade"
           onClick={this.clickHandler}>
             Start
         </button>

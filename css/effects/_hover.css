@@ -1,0 +1,60 @@
+.sweep-to-right {
+  background:none;
+  border:none;
+  font-size:1.5em;
+  border: 1px solid black;
+  padding: 0.5em 1.5em;
+  margin: 0.5em;
+
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.3s;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: black;
+  }
+
+  &:hover:before,
+  &:focus:before,
+  &:active:before {
+    transform: scaleX(1);
+  }
+}
+
+@define-mixin fade {
+  @mixin hacks();
+  overflow: hidden;
+  transition-duration: $effects-medium-duration;
+  transition-property: color, background-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $effects-active-color;
+    color: black;
+  }
+}
