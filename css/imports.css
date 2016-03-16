@@ -1,9 +1,9 @@
 @charset 'UTF-8';
 
+@import '_variables.css';
 @import 'vendor/*.css';
 @import 'layout/*.css';
 @import 'components/*.css';
 
 @import '_utils.css';
 @import '_base.css';
-@import '_variables.css';

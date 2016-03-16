@@ -7,7 +7,9 @@ const Home = React.createClass ({
   render: function() {
     return (
       <div>
-        <h1>{ this.props.data.title }</h1>
+        <header>
+          <h1>{ this.props.data.title }</h1>
+        </header>
         <NthDaysOld></NthDaysOld>
         <Link className="btn" to="/about">About</Link>
       </div>

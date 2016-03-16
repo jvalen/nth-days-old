@@ -13,12 +13,12 @@ const Options = function (props) {
 
     for (let i = 0; i < fixedValues.length; i++) {
       options.push(
-        <div key={i}>
+        <span key={i}>
           <input
             id={ 'option-' + i }
             className="radio-options__input"
             type="radio"
-            name="options-radio"
+            name="radio-options"
             value={fixedValues[i].value}
             onChange={() => props.dispatch(changeRange(fixedValues[i].value))}
             defaultChecked={ i === 0 ? true : false }
@@ -26,7 +26,7 @@ const Options = function (props) {
         <label className="radio-options__label" htmlFor={ 'option-' + i }>
             { fixedValues[i].label }
           </label>
-        </div>
+        </span>
       );
     }
 

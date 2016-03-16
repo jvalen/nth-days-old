@@ -1,0 +1,31 @@
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.radio-options__input {
+    display: none;
+}
+
+.radio-options__label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin-right: 18px;
+    border-radius: 3px;
+    transition: all .2s;
+}
+
+.radio-options__input:checked + .radio-options__label {
+    background: #B54A4A;
+    color: #fff;
+    text-shadow: 0 0 1px rgba(0,0,0,.7);
+}
+
+.radio-options__input:focus + .radio-options__label {
+    outline-color: #4D90FE;
+    outline-offset: -2px;
+    outline-style: auto;
+    outline-width: 5px;
+}
