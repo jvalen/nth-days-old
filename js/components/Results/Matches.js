@@ -20,7 +20,7 @@ const Matches = function (props) {
         result.push(
           <div className={"data-result " + pastPresentFuture(date)} key={i}>
             {daysAmount}:&nbsp;
-            {date.format("dddd, MMMM Do YYYY, h:mm:ss a")}
+            {date.format("dddd, MMMM Do YYYY")}
           </div>
         );
       }
@@ -38,7 +38,7 @@ const Matches = function (props) {
             <div className={"data-result " + pastPresentFuture(date)} key={key}>
               {daysAmount}
               :&nbsp;
-              {date.format("dddd, MMMM Do YYYY, h:mm:ss a")
+              {date.format("dddd, MMMM Do YYYY")
               }
             </div>
           );
