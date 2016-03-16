@@ -45,16 +45,16 @@
   }
 }
 
-@define-mixin fade {
+@define-mixin fade $bg-color: $effects-active-color, $font-color: black, $duration: $effects-medium-duration {
   @mixin hacks();
   overflow: hidden;
-  transition-duration: $effects-medium-duration;
+  transition-duration: $duration;
   transition-property: color, background-color;
 
   &:hover,
   &:focus,
   &:active {
-    background-color: $effects-active-color;
-    color: black;
+    background-color: $bg-color;
+    color: $font-color;
   }
 }

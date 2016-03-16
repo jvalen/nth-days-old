@@ -17,5 +17,5 @@
 }
 
 .nthDaysOld__button--start.fade {
-  @mixin fade;
+  @mixin fade white, black, 0.8s;
 }
