@@ -23,11 +23,14 @@ const Matches = function (props) {
               "grid matches__result matches__result--" +
               pastPresentFuture(date)
             } key={i}>
-            <span className="matches__days-amount grid__col-1-2">
+            <span className="matches__days-amount grid__col-1-3">
               {daysAmount} days old
             </span>
-            <span className="matches__date grid__col-1-2">
+            <span className="matches__date grid__col-1-3">
               {date.format("MMM Do YYYY")}
+            </span>
+            <span className="matches__date grid__col-1-3">
+              {date.from(moment())}
             </span>
           </div>
         );
@@ -48,11 +51,14 @@ const Matches = function (props) {
                 "grid matches__result matches__result--" +
                 pastPresentFuture(date)
               } key={key}>
-              <span className="matches__days-amount grid__col-1-2">
+              <span className="matches__days-amount grid__col-1-3">
                 {daysAmount} days old
               </span>
-              <span className="matches__date grid__col-1-2">
+              <span className="matches__date grid__col-1-3">
                 {date.format("MMM Do YYYY")}
+              </span>
+              <span className="matches__date grid__col-1-3">
+                {date.from(moment())}
               </span>
             </div>
           );

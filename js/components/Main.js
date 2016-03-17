@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 
 const App = function (props) {
   return (
@@ -11,6 +12,7 @@ const App = function (props) {
        </h1>
        <div className="header__social">
          github facebook twitter
+         <Link className="header__btn--router" to="/about">About</Link>
        </div>
       </header>
       { props.children }
