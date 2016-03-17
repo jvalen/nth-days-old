@@ -57,11 +57,10 @@ const Matches = function (props) {
   };
   return (
     <div className="matches">
-      {props.data.range}
       <h2>
         Today is your
         <span className="matches__nthday">{ daysOnEarth(props.data) }th</span>
-         on Earth
+         day on Earth
        </h2>
       <div>
         <span>{showNth(props.data)}</span>

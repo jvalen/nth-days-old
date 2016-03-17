@@ -9,3 +9,7 @@ export function pastPresentFuture(time) {
     return 'present';
   }
 }
+
+export function giveMeFormatedDate(year, month, day) {
+  return moment().year(year).month(month).date(day).format("MMMM Do YYYY");
+}

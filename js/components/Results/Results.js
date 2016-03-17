@@ -7,8 +7,8 @@ import Selection from './Selection';
 const Results = function (props) {
   return (
     <div className="results">
-      <Options></Options>
       <Selection data={props.data}></Selection>
+      <Options></Options>
       <Matches data={props.data}></Matches>
     </div>
   );

@@ -1,12 +1,13 @@
 import React from 'react';
+import { giveMeFormatedDate } from '../../utils/time';
 
 const Selection = function (props) {
   return (
-    <div>
-      <div>Year: {props.data.year}</div>
-      <div>Month: {props.data.month}</div>
-      <div>Day: {props.data.day}</div>
-      <div>Range: {props.data.range}</div>
+    <div className="selection">
+      You were born on&nbsp;
+      <span className="selection__birthday">
+      { giveMeFormatedDate(props.data.year, props.data.month, props.data.day) }
+      </span>
     </div>
   );
 };
