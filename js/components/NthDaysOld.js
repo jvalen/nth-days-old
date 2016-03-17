@@ -61,10 +61,11 @@ const NthDaysOld = React.createClass ({
   render: function() {
     return (
       <div className="nthDaysOld">
+        <h2>How many days have you been on Earth?</h2>
         <button
           className="nthDaysOld__button--start fade"
           onClick={this.clickHandler}>
-            Start
+            Calculate
         </button>
         <Modal ref="yearmodal">
           <h2>What YEAR were you born in?</h2>

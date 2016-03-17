@@ -5,7 +5,13 @@ const App = function (props) {
   return (
     <div className="main__wrapper">
       <header>
-        <h1>nth days old</h1>
+        <h1 className="header__h1">
+          <span className="header__nth">nth</span>
+          <span className="header__day"> day</span>
+       </h1>
+       <div className="header__social">
+         github facebook twitter
+       </div>
       </header>
       { props.children }
     </div>
