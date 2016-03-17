@@ -3,6 +3,7 @@ $header-font: 'muliregular', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetic
 $code-font: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace;
 
 $text-color: #CCC;
+$light-gray-color: #BDBDBD;
 $purple-dark-color: #846FAB;
 $purple-light-color: #8E7DAD;
 
@@ -11,3 +12,4 @@ $effects-medium-duration: .5s;
 $effects-active-color: white;
 
 $text-size-big: 2em;
+$text-size-medium: 1.3em;

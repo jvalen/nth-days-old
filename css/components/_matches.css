@@ -9,3 +9,10 @@
   background-color: #dbe9d8;
   font-size: 1.3em;
 }
+
+.matches__nthday {
+  font-family: $header-font;
+  font-size: $text-size-medium;
+  padding: 0 0.2em;
+  color: $light-gray-color;
+}

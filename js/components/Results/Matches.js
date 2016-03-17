@@ -51,9 +51,18 @@ const Matches = function (props) {
     return result;
   };
 
+  const daysOnEarth = function(data) {
+    const birthday = moment().year(data.year).month(data.month).date(data.day);
+    return moment().diff(birthday, 'days');
+  };
   return (
     <div className="matches">
       {props.data.range}
+      <h2>
+        Today is your
+        <span className="matches__nthday">{ daysOnEarth(props.data) }th</span>
+         on Earth
+       </h2>
       <div>
         <span>{showNth(props.data)}</span>
       </div>

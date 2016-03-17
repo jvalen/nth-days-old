@@ -59,13 +59,16 @@ const NthDaysOld = React.createClass ({
     return buttons;
   },
   render: function() {
+    let birthdaySet = this.props.data.day !== 0;
     return (
       <div className="nthDaysOld">
-        <h2>How many days have you been on Earth?</h2>
+        { birthdaySet ?
+          null : <h2>How many days have you been on Earth?</h2>
+        }
         <button
           className="nthDaysOld__button--start fade"
           onClick={this.clickHandler}>
-            Calculate
+            { birthdaySet ? 'Try other date' : 'Calculate' }
         </button>
         <Modal ref="yearmodal">
           <h2>What YEAR were you born in?</h2>
@@ -75,7 +78,9 @@ const NthDaysOld = React.createClass ({
             type="text"
             placeholder="2016"
           />
-        <button className="nthDaysOld__button--year" onClick={this.nextStep}>Next</button>
+          <button className="nthDaysOld__button--year" onClick={this.nextStep}>
+            Next
+          </button>
         </Modal>
         <Modal ref="monthmodal">
           <h2>What about the MONTH?</h2>
@@ -85,9 +90,7 @@ const NthDaysOld = React.createClass ({
           <h2>DAY?</h2>
           {this.generateDays()}
         </Modal>
-        { this.props.data.day !== 0 ?
-          <Results data={this.props.data}></Results> : null
-        }
+        { birthdaySet ? <Results data={this.props.data}></Results> : null }
       </div>
     );
   }
