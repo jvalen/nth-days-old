@@ -1,3 +1,5 @@
-.header {
-  background-color: blue;
+header {
+  padding: 1em 0;
+  background-color: $purple-dark-color;
+  font-family: $header-font;
 }

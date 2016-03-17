@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'playfair_displayregular';
+    src: url('fonts/files/playfairdisplay-regular-webfont.eot');
+    src: url('fonts/files/playfairdisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/files/playfairdisplay-regular-webfont.woff2') format('woff2'),
+         url('fonts/files/playfairdisplay-regular-webfont.woff') format('woff'),
+         url('fonts/files/playfairdisplay-regular-webfont.ttf') format('truetype'),
+         url('fonts/files/playfairdisplay-regular-webfont.svg#playfair_displayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'muliregular';
+    src: url('fonts/files/muli-regular-webfont.eot');
+    src: url('fonts/files/muli-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/files/muli-regular-webfont.woff2') format('woff2'),
+         url('fonts/files/muli-regular-webfont.woff') format('woff'),
+         url('fonts/files/muli-regular-webfont.ttf') format('truetype'),
+         url('fonts/files/muli-regular-webfont.svg#muliregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

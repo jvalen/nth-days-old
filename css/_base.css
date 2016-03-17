@@ -10,14 +10,10 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: $purple-light-color
+  background-color: $purple-light-color;
+  font-family: $text-font;
 }
 
 h1 {
   margin: 0;
-}
-
-header {
-  padding: 1em 0;
-  background-color: $purple-dark-color;
 }

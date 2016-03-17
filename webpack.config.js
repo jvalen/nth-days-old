@@ -78,6 +78,10 @@ module.exports = function(options) {
         }, {
           test: /\.jpe?g$|\.gif$|\.png$/i,
           loader: "url-loader?limit=10000"
+        },
+        {
+          test: /\.(ttf|eot|svg|woff(2)?)(\?v=[\d.]+)?(\?[a-z0-9#-]+)?$/,
+          loader: 'file-loader'
         }
       ]
     },

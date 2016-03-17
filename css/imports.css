@@ -2,6 +2,7 @@
 
 @import 'vendor/*.css';
 
+@import 'fonts/_fonts.css';
 @import '_variables.css';
 @import 'hacks/_hacks.css';
 @import '_utils.css';
