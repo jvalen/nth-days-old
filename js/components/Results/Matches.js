@@ -77,7 +77,7 @@ const Matches = function (props) {
   };
   return (
     <div className="matches">
-      <h2>
+      <h2 className="matches__h2">
         Today is your
         <span className="matches__nthday">{ daysOnEarth(props.data) }th</span>
          day on Earth
