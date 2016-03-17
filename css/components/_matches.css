@@ -1,12 +1,12 @@
 .matches__result--past {
-  background-color: #b0aac2;
+  color: #64167A;
 }
 .matches__result--present {
-  background-color: #c2d4d8;
+  color: #59BD3C;
   font-size: 1.8em;
 }
 .matches__result--future {
-  background-color: #dbe9d8;
+  color: #E2D9E2;
   font-size: 1.3em;
 }
 
@@ -15,4 +15,21 @@
   font-size: $text-size-medium;
   padding: 0 0.2em;
   color: $light-gray-color;
+}
+
+.matches__list {
+  width: 50%;
+  margin: 0 auto;
+  font-family: $header-font;
+}
+
+.matches__result {
+  /*border-bottom: 1px solid #FFF;*/
+  margin: 0.4em 0;
+  height: 2em;
+  /*text-align: left;*/
+}
+
+.matches__h2 {
+  font-weight: normal;
 }

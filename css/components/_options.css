@@ -1,3 +1,7 @@
+.options {
+  padding: 0.5em 0;
+}
+
 .options__fieldset {
   border: none;
   padding: 0;

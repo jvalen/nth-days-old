@@ -1,3 +1,7 @@
+.selection {
+  padding: 1em 0;
+}
+
 .selection__birthday {
   font-weight: bold;
 }

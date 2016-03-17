@@ -18,9 +18,17 @@ const Matches = function (props) {
         date = birthday.clone().add(daysAmount, 'days');
 
         result.push(
-          <div className={ "matches__result matches__result--" + pastPresentFuture(date)} key={i}>
-            {daysAmount}:&nbsp;
-            {date.format("dddd, MMMM Do YYYY")}
+          <div
+            className={
+              "grid matches__result matches__result--" +
+              pastPresentFuture(date)
+            } key={i}>
+            <span className="matches__days-amount grid__col-1-2">
+              {daysAmount} days old
+            </span>
+            <span className="matches__date grid__col-1-2">
+              {date.format("MMM Do YYYY")}
+            </span>
           </div>
         );
       }
@@ -35,11 +43,17 @@ const Matches = function (props) {
         while (daysAmount <= values[i] * 9) {
           date = birthday.clone().add(daysAmount, 'days');
           result.push(
-            <div className={ "matches__result matches__result--" + pastPresentFuture(date)} key={key}>
-              {daysAmount}
-              :&nbsp;
-              {date.format("dddd, MMMM Do YYYY")
-              }
+            <div
+              className={
+                "grid matches__result matches__result--" +
+                pastPresentFuture(date)
+              } key={key}>
+              <span className="matches__days-amount grid__col-1-2">
+                {daysAmount} days old
+              </span>
+              <span className="matches__date grid__col-1-2">
+                {date.format("MMM Do YYYY")}
+              </span>
             </div>
           );
           daysAmount += values[i];
@@ -62,7 +76,7 @@ const Matches = function (props) {
         <span className="matches__nthday">{ daysOnEarth(props.data) }th</span>
          day on Earth
        </h2>
-      <div>
+      <div className="matches__list">
         <span>{showNth(props.data)}</span>
       </div>
     </div>
