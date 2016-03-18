@@ -10,10 +10,6 @@ const initialState = {
 function homeReducer(state = initialState, action) {
   Object.freeze(state);
   switch (action.type) {
-    case 'CHANGE_TITLE':
-      return assignToEmpty(state, {
-        title: action.title
-      });
     case 'CHANGE_YEAR':
       return assignToEmpty(state, {
         year: action.year

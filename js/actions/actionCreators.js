@@ -1,13 +1,3 @@
-export function changeTitle(title) {
-  return { type: 'CHANGE_TITLE', title };
-}
-
-export function asyncChangeTitle(title) {
-  return (dispatch) => {
-    dispatch(changeTitle(title));
-  };
-}
-
 export function changeYear(year) {
   return { type: 'CHANGE_YEAR', year };
 }
