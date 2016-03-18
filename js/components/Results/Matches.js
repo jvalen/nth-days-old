@@ -27,7 +27,9 @@ const Matches = function (props) {
               {daysAmount} days old
             </span>
             <span className="matches__date grid__col-1-3">
-              {date.format("MMM Do YYYY")}
+              <time dateTime={date.format()}>
+                {date.format("MMM Do YYYY")}
+              </time>
             </span>
             <span className="matches__date grid__col-1-3">
               {date.from(moment())}
@@ -55,7 +57,9 @@ const Matches = function (props) {
                 {daysAmount} days old
               </span>
               <span className="matches__date grid__col-1-3">
-                {date.format("MMM Do YYYY")}
+                <time dateTime={date.format()}>
+                  {date.format("MMM Do YYYY")}
+                </time>
               </span>
               <span className="matches__date grid__col-1-3">
                 {date.from(moment())}
