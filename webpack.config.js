@@ -81,7 +81,7 @@ module.exports = function(options) {
         },
         {
           test: /\.(ttf|eot|svg|woff(2)?)(\?v=[\d.]+)?(\?[a-z0-9#-]+)?$/,
-          loader: 'file-loader'
+          loader: 'url-loader?limit=100000&name=./css/[hash].[ext]'
         }
       ]
     },
