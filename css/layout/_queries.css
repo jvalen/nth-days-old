@@ -1,0 +1,13 @@
+@media only screen and (max-width: 800px) {
+  .matches__list {
+    font-size: 0.5em;
+  }
+
+  .matches__h2, .selection {
+    font-size: 0.8em;
+  }
+
+  .matches__list {
+    width: 100% !important;
+  }
+}
