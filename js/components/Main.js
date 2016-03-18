@@ -11,8 +11,15 @@ const App = function (props) {
           <span className="header__day"> day</span>
        </h1>
        <div className="header__social">
-         github facebook twitter
-         <Link className="header__btn--router" to="/about">About</Link>
+         <iframe
+           src="https://ghbtns.com/github-btn.html?user=jvalen&repo=nth-days-old&type=star&count=true"
+           frameborder="0"
+           scrolling="0"
+           width="75px"
+           height="20px"
+           style={{border: 'none'}}>
+         </iframe>
+
        </div>
       </header>
       { props.children }
