@@ -31,6 +31,7 @@ ReactDOM.render(
     <Router history={browserHistory}>
       <Route component={Main}>
         <Route path="/" component={Home} />
+        <Route path="/nth" component={Home} />
         <Route path="/about" component={About} />
         <Route path="*" component={NotFound} />
       </Route>
