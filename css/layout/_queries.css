@@ -1,4 +1,15 @@
 @media only screen and (max-width: 800px) {
+  .modal {
+    width: 80% !important;
+  }
+
+  .nthdaysold__modal__button--month {
+    width: auto !important
+  }
+  .nthdaysold__modal__button--day {
+    width: 40px !important
+  }
+
   .matches__list {
     font-size: 0.5em;
   }
