@@ -1,13 +1,17 @@
-.nthDaysOld__modal-input {
-  margin-left: 0.5em;
-  border-radius: 2px;
-  border-width: 1px;
-  border-color: grey;
-  padding: 0.3em;
+.nthdaysold__modal-input {
+  font-family: $header-font;
   text-align: center;
+  height: 36px;
+  width: 50%;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid $purple-light-color;
+  }
 }
 
-.nthDaysOld__button--start {
+.nthdaysold__button--start {
   background:none;
   border:none;
   font-size:1.5em;
@@ -16,6 +20,51 @@
   margin: 0.5em;
 }
 
-.nthDaysOld__button--start.fade {
+.nthdaysold__button--start.fade {
   @mixin fade-border white, white, 0.8s, border;
+}
+
+.nthdaysold__modal__button {
+  font-family: $header-font;
+  height: 36px;
+  margin: 0 auto;
+  margin-top: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.nthdaysold__modal__button--year {
+  width: 50%;
+  background: black;
+  color: white;
+  display: block;
+}
+
+.nthdaysold__modal__button--month {
+  width: 25%;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.nthdaysold__modal__button--day {
+  width: 10%;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.nthdaysold__modal__h2 {
+  font-weight: normal;
+  margin: 0;
+  padding-bottom: 0.5em;
+}
+
+.nthdaysold__h2 {
+  font-weight: normal;
 }
