@@ -7,6 +7,7 @@ const Options = function (props) {
     const fixedValues = [
       { label: 10000, value: 10000},
       { label: 5000, value: 5000},
+      { label: 1000, value: 1000},
       { label: 'Repdigit', value: 'repdigit'}
     ];
     let options = [];

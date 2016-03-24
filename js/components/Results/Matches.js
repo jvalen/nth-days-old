@@ -13,7 +13,7 @@ const Matches = function (props) {
     if (offset) {
       // Fixed range of days: 10000, 5000, ...
       let daysAmount;
-      for (let i = 1; i < 10; i++) {
+      for (let i = 1; i < 20; i++) {
         daysAmount = offset * i;
         date = birthday.clone().add(daysAmount, 'days');
 
