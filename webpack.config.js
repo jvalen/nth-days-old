@@ -68,7 +68,12 @@ module.exports = function(options) {
       filename: "js/bundle.js"
     },
     module: {
-      loaders: [{
+      loaders: [
+        {
+          test: /\.json$/,
+          loader: 'json-loader' 
+        },
+        {
           test: /\.js$/,
           loader: 'babel',
           exclude: path.join(__dirname, '/node_modules/')
