@@ -1,15 +1,19 @@
 import React from 'react';
 import { giveMeFormatedDate } from '../../utils/time';
+import { IntlMixin } from 'react-intl';
 
-const Selection = function (props) {
-  return (
-    <div className="selection">
-      You were born on&nbsp;
-      <span className="selection__birthday">
-      { giveMeFormatedDate(props.data.year, props.data.month, props.data.day) }
-      </span>
-    </div>
-  );
-};
+const Selection = React.createClass({
+  mixins: [IntlMixin],
+  render: function() {
+    return (
+      <div className="selection">
+        { this.getIntlMessage('you_were_born') }&nbsp;
+        <span className="selection__birthday">
+        { giveMeFormatedDate(this.props.data.year, this.props.data.month, this.props.data.day) }
+        </span>
+      </div>
+    );
+  }
+});
 
 export default Selection;

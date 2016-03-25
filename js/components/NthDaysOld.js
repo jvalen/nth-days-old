@@ -4,8 +4,10 @@ import { changeYear, changeMonth, changeDay } from '../actions/actionCreators';
 import Modal from 'boron/DropModal';
 import Results from './Results/Results';
 import moment from 'moment';
+import { IntlMixin } from 'react-intl';
 
 const NthDaysOld = React.createClass ({
+  mixins: [IntlMixin],
   nextStep: function(ev) {
     const className = ev.target.getAttribute('data-type');
 
@@ -76,19 +78,27 @@ const NthDaysOld = React.createClass ({
     return (
       <div className="nthDaysOld">
         { birthdaySet ?
-          null : <h2 className="nthdaysold__h2">How many days have you been on Earth?</h2>
+          null :
+          <h2 className="nthdaysold__h2">
+            { this.getIntlMessage('days_on_earth') }
+          </h2>
         }
         <button
           className="nthdaysold__button--start fade"
           onClick={this.clickHandler}>
-            { birthdaySet ? 'Try other date' : 'Calculate' }
+            { birthdaySet ?
+              this.getIntlMessage('try_other') :
+              this.getIntlMessage('calculate')
+            }
         </button>
         <Modal
           className="modal"
           ref="yearmodal"
           backdropStyle={backdropStyle}
           contentStyle={contentStyle}>
-          <h2 className="nthdaysold__modal__h2">What YEAR were you born in?</h2>
+          <h2 className="nthdaysold__modal__h2">
+            { this.getIntlMessage('year_born') }
+          </h2>
           <div>
             <input
               ref="yearinput"
@@ -101,7 +111,7 @@ const NthDaysOld = React.createClass ({
               data-type="year"
               className="nthdaysold__modal__button nthdaysold__modal__button--year"
               onClick={this.nextStep}>
-              NEXT
+              { this.getIntlMessage('next') }
             </button>
           </div>
         </Modal>
@@ -110,7 +120,9 @@ const NthDaysOld = React.createClass ({
           ref="monthmodal"
           backdropStyle={backdropStyle}
           contentStyle={contentStyle}>
-          <h2 className="nthdaysold__modal__h2">What about the MONTH?</h2>
+          <h2 className="nthdaysold__modal__h2">
+            { this.getIntlMessage('month_born') }
+          </h2>
           {this.generateMonths()}
         </Modal>
         <Modal
@@ -118,7 +130,9 @@ const NthDaysOld = React.createClass ({
           ref="daymodal"
           backdropStyle={backdropStyle}
           contentStyle={contentStyle}>
-          <h2 className="nthdaysold__modal__h2">DAY?</h2>
+          <h2 className="nthdaysold__modal__h2">
+            { this.getIntlMessage('day_born') }
+          </h2>
           {this.generateDays()}
         </Modal>
         { birthdaySet ? <Results data={this.props.data}></Results> : null }

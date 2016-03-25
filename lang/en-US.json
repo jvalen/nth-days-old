@@ -5,5 +5,10 @@
   "year_born": "What YEAR were you born in?",
   "month_born": "What about the MONTH?",
   "day_born": "DAY?",
-  "next": "NEXT"
+  "you_were_born": "You were born on",
+  "next": "NEXT",
+  "today_is": "Today is your",
+  "day": "day",
+  "days_old": "days old",
+  "on_earth": "on Earth"
 }

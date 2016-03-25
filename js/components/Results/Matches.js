@@ -1,9 +1,11 @@
 import React from 'react';
 import { pastPresentFuture } from '../../utils/time';
 import moment from 'moment';
+import { IntlMixin } from 'react-intl';
 
-const Matches = function (props) {
-  const showNth = function(data) {
+const Matches = React.createClass ({
+  mixins: [IntlMixin],
+  showNth: function(data) {
     const birthday = moment().year(data.year).month(data.month).date(data.day),
           offset = parseInt(data.range, 10);
 
@@ -24,7 +26,7 @@ const Matches = function (props) {
               pastPresentFuture(date)
             } key={i}>
             <span className="matches__days-amount grid__col-1-3">
-              {daysAmount} days old
+              {daysAmount} { this.getIntlMessage('days_old') }
             </span>
             <span className="matches__date grid__col-1-3">
               <time dateTime={date.format()}>
@@ -54,7 +56,7 @@ const Matches = function (props) {
                 pastPresentFuture(date)
               } key={key}>
               <span className="matches__days-amount grid__col-1-3">
-                {daysAmount} days old
+                {daysAmount} { this.getIntlMessage('days_old') }
               </span>
               <span className="matches__date grid__col-1-3">
                 <time dateTime={date.format()}>
@@ -73,24 +75,25 @@ const Matches = function (props) {
     }
 
     return result;
-  };
-
-  const daysOnEarth = function(data) {
+  },
+  daysOnEarth: function(data) {
     const birthday = moment().year(data.year).month(data.month).date(data.day);
     return moment().diff(birthday, 'days');
-  };
-  return (
-    <div className="matches">
-      <h2 className="matches__h2">
-        Today is your
-        <span className="matches__nthday">{ daysOnEarth(props.data) }th</span>
-         day on Earth
-       </h2>
-      <div className="matches__list">
-        <span>{showNth(props.data)}</span>
+  },
+  render: function(){
+    return (
+      <div className="matches">
+        <h2 className="matches__h2">
+          { this.getIntlMessage('today_is') }
+          <span className="matches__nthday">{ this.daysOnEarth(this.props.data) }</span>
+           { this.getIntlMessage('day') + ' ' +  this.getIntlMessage('on_earth')}
+         </h2>
+        <div className="matches__list">
+          <span>{this.showNth(this.props.data)}</span>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+});
 
 export default Matches;

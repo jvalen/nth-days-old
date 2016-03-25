@@ -5,5 +5,10 @@
   "year_born": "¿En qué AÑO naciste?",
   "month_born": "¿En qué MES?",
   "day_born": "DÍA?",
-  "next": "SIGUIENTE"
+  "you_were_born": "Naciste en",
+  "next": "SIGUIENTE",
+  "today_is": "Hoy es tu",
+  "day": "día",
+  "days_old": "días",
+  "on_earth": "en la Tierra"
 }
