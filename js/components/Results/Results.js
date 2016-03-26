@@ -7,9 +7,17 @@ import Selection from './Selection';
 const Results = function (props) {
   return (
     <div className="results">
-      <Selection data={props.data}></Selection>
+      <Selection
+        messages={ props.messages}
+        locale={ props.locale }
+        data={props.data}>
+      </Selection>
       <Options></Options>
-      <Matches data={props.data}></Matches>
+      <Matches
+        messages={ props.messages}
+        locale={ props.locale }
+        data={props.data}>
+      </Matches>
     </div>
   );
 };

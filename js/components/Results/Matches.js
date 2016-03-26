@@ -6,14 +6,12 @@ import {
   formatDate,
   timeDifferenceFormattedFrom,
   daysDifferenceFrom } from '../../utils/time';
-import { IntlMixin } from 'react-intl';
 
 const Matches = React.createClass ({
-  mixins: [IntlMixin],
   showNth: function(data) {
     const birthday = buildDate(
             data.year, data.month, data.day,
-            this.context.messages.locale, false
+            this.props.locale, false
           ),
           offset = parseInt(data.range, 10);
 
@@ -50,8 +48,8 @@ const Matches = React.createClass ({
 
         result.push(
           createMatchBlock(
-            i, date, daysAmount, this.context.messages.locale,
-            { 'days_old': this.getIntlMessage('days_old')}
+            i, date, daysAmount, this.props.locale,
+            { 'days_old': this.props.messages['days_old']}
           )
         );
       }
@@ -67,8 +65,8 @@ const Matches = React.createClass ({
           date = addDaysToDate(daysAmount, birthday);
           result.push(
             createMatchBlock(
-              key, date, daysAmount, this.context.messages.locale,
-              { 'days_old': this.getIntlMessage('days_old')}
+              key, date, daysAmount, this.props.locale,
+              { 'days_old': this.props.messages['days_old']}
             )
           );
           daysAmount += values[i];
@@ -82,7 +80,7 @@ const Matches = React.createClass ({
   daysOnEarth: function(data) {
     const birthday = buildDate(
       data.year, data.month, data.day,
-      this.context.messages.locale, false
+      this.props.locale, false
     );
     return daysDifferenceFrom(birthday);
   },
@@ -90,9 +88,9 @@ const Matches = React.createClass ({
     return (
       <div className="matches">
         <h2 className="matches__h2">
-          { this.getIntlMessage('today_is') }
+          { this.props.messages['today_is'] }
           <span className="matches__nthday">{ this.daysOnEarth(this.props.data) }</span>
-           { this.getIntlMessage('day') + ' ' +  this.getIntlMessage('on_earth')}
+           { this.props.messages['day'] + ' ' +  this.props.messages['on_earth']}
          </h2>
         <div className="matches__list">
           <span>{this.showNth(this.props.data)}</span>
