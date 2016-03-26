@@ -45,7 +45,8 @@ export function daysDifferenceFrom(date) {
 }
 
 export function giveMeMonths(locale = 'en') {
-  return moment.months(locale);
+  moment.locale(locale);
+  return moment.months();
 }
 
 export function daysInMonth(year, month) {
