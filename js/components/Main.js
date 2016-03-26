@@ -31,13 +31,14 @@ const App = function (props) {
 
   return (
     <div className="main__wrapper">
-      <header>
-        <h1 className="header__h1">
+      <header className="grid">
+        <h1 className="header__h1 grid__col-1-2">
           <span className="header__nth">nth</span>
           <span className="header__day"> day</span>
        </h1>
-       <div className="header__social">
+       <div className="header__social grid__col-1-2">
          <iframe
+           className="header__github-btn"
            src="https://ghbtns.com/github-btn.html?user=jvalen&repo=nth-days-old&type=star&count=true"
            frameborder="0"
            scrolling="0"
@@ -45,9 +46,10 @@ const App = function (props) {
            height="20px"
            style={{border: 'none'}}>
          </iframe>
-         <nav>
-           <Link to="/en">{localeData.messages['english']}</Link>
-           <Link to="/es">{localeData.messages['spanish']}</Link>
+         <nav className="header__nav">
+           <Link className="header__a--lang" to="/en">{localeData.messages['english']}</Link>
+           |
+           <Link className="header__a--lang" to="/es">{localeData.messages['spanish']}</Link>
          </nav>
        </div>
       </header>
