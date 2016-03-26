@@ -4,6 +4,8 @@ import { changeYear, changeMonth, changeDay } from '../actions/actionCreators';
 import Modal from 'boron/DropModal';
 import Results from './Results/Results';
 import moment from 'moment';
+import { giveMeMonths, daysInMonth } from '../utils/time';
+
 import { IntlMixin } from 'react-intl';
 
 const NthDaysOld = React.createClass ({
@@ -32,7 +34,7 @@ const NthDaysOld = React.createClass ({
     this.refs.yearmodal.show();
   },
   generateMonths: function() {
-    const months = moment.months(),
+    const months = giveMeMonths(this.context.messages.locale),
           color = '000000';
 
     return months.reduce((accu, elem, index) => {
@@ -49,7 +51,7 @@ const NthDaysOld = React.createClass ({
     }, []);
   },
   generateDays: function() {
-    const days = moment().year(this.props.data.year).month(this.props.data.month).daysInMonth();
+    const days = daysInMonth(this.props.data.year, this.props.data.month);
     const buttons = [],
           color = '000000';
     for (var i = 1; i <= days; i++) {

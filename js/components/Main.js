@@ -4,14 +4,14 @@ import { Link } from 'react-router';
 import messages from '../messages';
 
 // Locale setup
-let locale = navigator.language.split('-');
-locale = locale[1] ? `${locale[0]}-${locale[1].toUpperCase()}` : navigator.language;
+let locale = (navigator.language || navigator.browserLanguage);
+locale = locale ? locale.split('-')[0] : 'en';
 
-let strings = messages[locale] ? messages[locale] : messages['en-US'];
-strings = Object.assign(messages['en-US'], strings);
+let strings = messages[locale] ? messages[locale] : messages['en'];
+strings = Object.assign(messages['en'], strings);
 
 let intlData = {
-    locales: ['en-US'],
+    locales: ['en', 'es'],
     messages: strings
 };
 

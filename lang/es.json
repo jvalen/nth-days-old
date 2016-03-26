@@ -1,11 +1,12 @@
 {
+  "locale": "es",
   "days_on_earth": "¿Cuántos días llevas en la Tierra?",
   "try_other": "Prueba otra fecha",
   "calculate": "Calcula",
   "year_born": "¿En qué AÑO naciste?",
   "month_born": "¿En qué MES?",
   "day_born": "DÍA?",
-  "you_were_born": "Naciste en",
+  "you_were_born": "Naciste el",
   "next": "SIGUIENTE",
   "today_is": "Hoy es tu",
   "day": "día",
