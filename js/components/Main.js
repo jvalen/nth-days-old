@@ -3,19 +3,24 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router';
 import messages from '../messages';
 
-// Locale setup
-let locale = (navigator.language || navigator.browserLanguage);
-locale = locale ? locale.split('-')[0] : 'en';
-
-let strings = messages[locale] ? messages[locale] : messages['en'];
-strings = Object.assign(messages['en'], strings);
-
-let intlData = {
-    locales: ['en', 'es'],
-    messages: strings
-};
-
 const App = function (props) {
+  // Locale setup
+  let locale;
+  if (props.params.locale) {
+    locale = props.params.locale; // Get locale from url
+  } else {
+    locale = (navigator.language || navigator.browserLanguage);
+    locale = locale ? locale.split('-')[0] : 'en';
+  }
+
+  let strings = messages[locale] ? messages[locale] : messages['en'];
+  strings = Object.assign(messages['en'], strings);
+
+  let intlData = {
+      locales: ['en', 'es'],
+      messages: strings
+  };
+
   // Due that is a stateless component we cannot use mixins
   // Propagate intlData to children
   let childrenWithIntlData = React.Children.map(props.children, (child) => {
