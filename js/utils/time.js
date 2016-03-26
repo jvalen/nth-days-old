@@ -1,30 +1,30 @@
 import moment from 'moment';
 
-let getMomentFormat = function(type) {
+const getMomentFormat = function (type) {
   switch (type) {
     case 'matches':
       return 'll';
-      break;
     case 'birthday':
-      return 'LL'
-      break;
+      return 'LL';
     default:
       return '';
   }
-}
+};
 
 export function pastPresentFuture(time) {
+  let result;
   if (moment().isAfter(time, 'day')) {
-    return 'past';
+    result = 'past';
   } else if (moment().isBefore(time, 'day')) {
-    return 'future';
+    result = 'future';
   } else {
-    return 'present';
+    result = 'present';
   }
+  return result;
 }
 
 export function buildDate(year, month, day, locale = 'en', format = '') {
-  let date = moment().locale(locale).year(year).month(month).date(day);
+  const date = moment().locale(locale).year(year).month(month).date(day);
   return date.format(getMomentFormat(format));
 }
 

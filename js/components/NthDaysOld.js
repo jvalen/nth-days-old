@@ -3,11 +3,20 @@ import { connect } from 'react-redux';
 import { changeYear, changeMonth, changeDay } from '../actions/actionCreators';
 import Modal from 'boron/DropModal';
 import Results from './Results/Results';
-import moment from 'moment';
 import { giveMeMonths, daysInMonth } from '../utils/time';
 
-const NthDaysOld = React.createClass ({
-  nextStep: function(ev) {
+class NthDaysOld extends React.Component {
+  constructor() {
+    // React ES6 classes do not autobind their methods :S
+    // (the older React.createClass did it)
+    // the following way is a tip from "eslint"
+    super();
+    this.nextStep = this.nextStep.bind(this);
+    this.clickHandler = this.clickHandler.bind(this);
+    this.generateMonths = this.generateMonths.bind(this);
+    this.generateDays = this.generateDays.bind(this);
+  }
+  nextStep(ev) {
     const className = ev.target.getAttribute('data-type');
 
     switch (className) {
@@ -25,78 +34,88 @@ const NthDaysOld = React.createClass ({
         this.props.dispatch(changeDay(parseInt(ev.target.getAttribute('value'), 10)));
         this.refs.daymodal.hide();
         break;
+      default:
     }
-  },
-  clickHandler: function() {
+  }
+
+  clickHandler() {
     this.refs.yearmodal.show();
-  },
-  generateMonths: function() {
-    const months = giveMeMonths(this.props.locale),
-          color = '000000';
+  }
+
+  generateMonths() {
+    const months = giveMeMonths(this.props.locale);
 
     return months.reduce((accu, elem, index) => {
-      accu.push(<button
-        className="nthdaysold__modal__button nthdaysold__modal__button--month"
-        data-type="month"
-        onClick={this.nextStep}
-        key={index}
-        value={elem}>
+      accu.push(
+        <button
+          className="nthdaysold__modal__button nthdaysold__modal__button--month"
+          data-type="month"
+          onClick={this.nextStep}
+          key={index}
+          value={elem}
+        >
           {elem}
         </button>
       );
       return accu;
     }, []);
-  },
-  generateDays: function() {
+  }
+
+  generateDays() {
     const days = daysInMonth(this.props.data.year, this.props.data.month);
-    const buttons = [],
-          color = '000000';
-    for (var i = 1; i <= days; i++) {
-      buttons.push(<button
-        data-type="day"
-        className="nthdaysold__modal__button nthdaysold__modal__button--day"
-        onClick={this.nextStep}
-        key={i}
-        value={i}>
+    const buttons = [];
+
+    for (let i = 1; i <= days; i++) {
+      buttons.push(
+        <button
+          data-type="day"
+          className="nthdaysold__modal__button nthdaysold__modal__button--day"
+          onClick={this.nextStep}
+          key={i}
+          value={i}
+        >
           {i}
         </button>
       );
     }
     return buttons;
-  },
-  render: function() {
-    let birthdaySet = this.props.data.day !== 0,
-        backdropStyle = {
-          backgroundColor: '#462E4D',
-          opacity: 0.8
-        },
-        contentStyle = {
-          backgroundColor: 'white',
-          padding: '2em'
-        };
+  }
+
+  render() {
+    const birthdaySet = this.props.data.day !== 0;
+    const backdropStyle = {
+      backgroundColor: '#462E4D',
+      opacity: 0.8
+    };
+    const contentStyle = {
+      backgroundColor: 'white',
+      padding: '2em'
+    };
     return (
       <div className="nthDaysOld">
         { birthdaySet ?
           null :
           <h2 className="nthdaysold__h2">
-            { this.props.messages['days_on_earth'] }
+            { this.props.messages.days_on_earth }
           </h2>
         }
         <button
           className="nthdaysold__button--start fade"
-          onClick={this.clickHandler}>
-            { birthdaySet ?
-              this.props.messages['try_other'] :
-              this.props.messages['calculate']
-            }
+          onClick={this.clickHandler}
+        >
+          { birthdaySet ?
+            this.props.messages.try_other :
+            this.props.messages.calculate
+          }
         </button>
         <Modal
           className="modal"
           ref="yearmodal"
           backdropStyle={backdropStyle}
-          contentStyle={contentStyle}>
+          contentStyle={contentStyle}
+        >
           <h2 className="nthdaysold__modal__h2">
-            { this.props.messages['year_born'] }
+            { this.props.messages.year_born }
           </h2>
           <div>
             <input
@@ -109,8 +128,9 @@ const NthDaysOld = React.createClass ({
             <button
               data-type="year"
               className="nthdaysold__modal__button nthdaysold__modal__button--year"
-              onClick={this.nextStep}>
-              { this.props.messages['next'] }
+              onClick={this.nextStep}
+            >
+              { this.props.messages.next }
             </button>
           </div>
         </Modal>
@@ -118,9 +138,10 @@ const NthDaysOld = React.createClass ({
           className="modal"
           ref="monthmodal"
           backdropStyle={backdropStyle}
-          contentStyle={contentStyle}>
+          contentStyle={contentStyle}
+        >
           <h2 className="nthdaysold__modal__h2">
-            { this.props.messages['month_born'] }
+            { this.props.messages.month_born }
           </h2>
           {this.generateMonths()}
         </Modal>
@@ -128,9 +149,10 @@ const NthDaysOld = React.createClass ({
           className="modal"
           ref="daymodal"
           backdropStyle={backdropStyle}
-          contentStyle={contentStyle}>
+          contentStyle={contentStyle}
+        >
           <h2 className="nthdaysold__modal__h2">
-            { this.props.messages['day_born'] }
+            { this.props.messages.day_born }
           </h2>
           {this.generateDays()}
         </Modal>
@@ -138,13 +160,13 @@ const NthDaysOld = React.createClass ({
           <Results
             messages={ this.props.messages}
             locale={ this.props.locale }
-            data={this.props.data}>
-          </Results> : null
+            data={this.props.data}
+          /> : null
         }
       </div>
     );
   }
-});
+}
 
 function select(state) {
   return {

@@ -3,28 +3,30 @@ import { connect } from 'react-redux';
 import { changeRange } from '../../actions/actionCreators';
 
 const Options = function (props) {
-  const generateOptions = function() {
+  const generateOptions = function () {
     const fixedValues = [
-      { label: 10000, value: 10000},
-      { label: 5000, value: 5000},
-      { label: 1000, value: 1000},
-      { label: 'Repdigit', value: 'repdigit'}
+      { label: 10000, value: 10000 },
+      { label: 5000, value: 5000 },
+      { label: 1000, value: 1000 },
+      { label: 'Repdigit', value: 'repdigit' }
     ];
-    let options = [];
+    const options = [];
 
     for (let i = 0; i < fixedValues.length; i++) {
       options.push(
         <span className="options__item-wrapper" key={i}>
           <input
-            id={ 'option-' + i }
+            id={ `option-${i}` }
             className="options__radio-input"
             type="radio"
             name="radio-options"
             value={fixedValues[i].value}
-            onChange={() => props.dispatch(changeRange(fixedValues[i].value))}
-            defaultChecked={ i === 0 ? true : false }
+            onChange={
+              () => { props.dispatch(changeRange(fixedValues[i].value));}
+            }
+            defaultChecked={ i === 0 }
           />
-        <label className="options__radio-label" htmlFor={ 'option-' + i }>
+        <label className="options__radio-label" htmlFor={ `option-${i}` }>
             { fixedValues[i].label }
           </label>
         </span>

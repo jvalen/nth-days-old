@@ -4,20 +4,20 @@ import Matches from './Matches';
 import Selection from './Selection';
 
 
-const Results = function (props) {
+const Results = (props) => {
   return (
     <div className="results">
       <Selection
         messages={ props.messages}
         locale={ props.locale }
-        data={props.data}>
-      </Selection>
-      <Options></Options>
+        data={props.data}
+      />
+      <Options />
       <Matches
         messages={ props.messages}
         locale={ props.locale }
-        data={props.data}>
-      </Matches>
+        data={props.data}
+      />
     </div>
   );
 };

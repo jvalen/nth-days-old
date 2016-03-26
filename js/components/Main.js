@@ -16,17 +16,14 @@ const App = function (props) {
   }
 
   let strings = messages[locale];
-  strings = Object.assign(Object.create(messages['en']), strings);
+  strings = Object.assign(Object.create(messages.en), strings);
 
-  let localeData = {
-      locale: locale,
-      messages: strings
-  };
+  const localeData = { locale, messages: strings };
 
   // Due that is a stateless component we cannot use mixins
   // Propagate intlData to children
-  let childrenWithIntlData = React.Children.map(props.children, (child) => {
-      return React.cloneElement(child, localeData);
+  const childrenWithIntlData = React.Children.map(props.children, (child) => {
+    return React.cloneElement(child, localeData);
   });
 
   return (
@@ -40,16 +37,23 @@ const App = function (props) {
          <iframe
            className="header__github-btn"
            src="https://ghbtns.com/github-btn.html?user=jvalen&repo=nth-days-old&type=star&count=true"
-           frameborder="0"
+           frameBorder="0"
            scrolling="0"
            width="75px"
            height="20px"
-           style={{border: 'none'}}>
+           style={
+             { border: 'none' }
+           }
+         >
          </iframe>
          <nav className="header__nav">
-           <Link className="header__a--lang" to="/en">{localeData.messages['english']}</Link>
+           <Link className="header__a--lang" to="/en">
+             {localeData.messages.english}
+           </Link>
            |
-           <Link className="header__a--lang" to="/es">{localeData.messages['spanish']}</Link>
+           <Link className="header__a--lang" to="/es">
+             {localeData.messages.spanish}
+           </Link>
          </nav>
        </div>
       </header>

@@ -1,8 +1,8 @@
-var req = require.context('../lang', true, /\.json.*$/);
-var exports = {};
+const req = require.context('../lang', true, /\.json.*$/);
+const exports = {};
 
-req.keys().forEach(function (file) {
-  var locale = file.replace('./', '').replace('.json', '');
+req.keys().forEach((file) => {
+  const locale = file.replace('./', '').replace('.json', '');
   exports[locale] = req(file);
 });
 

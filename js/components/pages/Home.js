@@ -2,18 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 import NthDaysOld from '../NthDaysOld';
 
-const Home = React.createClass ({
-  render: function() {
-    return (
-      <div className="home">
-        <NthDaysOld
-          messages={ this.props.messages}
-          locale={ this.props.locale }>
-        </NthDaysOld>
-      </div>
-    );
-  }
-});
+const Home = (props) => {
+  return (
+    <div className="home">
+      <NthDaysOld
+        messages={ props.messages}
+        locale={ props.locale }
+      />
+    </div>
+  );
+};
 
 function select(state) {
   return {
