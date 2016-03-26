@@ -5,29 +5,28 @@ import messages from '../messages';
 
 const App = function (props) {
   // Locale setup
-  function getlocaleData() {
-    let locale;
-    if (props.params.locale) {
-      locale = props.params.locale; // Get locale from url
-    } else {
-      locale = (navigator.language || navigator.browserLanguage);
-      locale = locale ? locale.split('-')[0] : 'en';
-      locale = messages[locale] ? locale : 'en';
-    }
+  let locale;
 
-    let strings = messages[locale];
-    strings = Object.assign(Object.create(messages['en']), strings);
-
-    return {
-        locale: locale,
-        messages: strings
-    };
+  if (props.params.locale) {
+    locale = props.params.locale; // Get locale from url
+  } else {
+    locale = (navigator.language || navigator.browserLanguage);
+    locale = locale ? locale.split('-')[0] : 'en';
+    locale = messages[locale] ? locale : 'en';
   }
+
+  let strings = messages[locale];
+  strings = Object.assign(Object.create(messages['en']), strings);
+
+  let localeData = {
+      locale: locale,
+      messages: strings
+  };
 
   // Due that is a stateless component we cannot use mixins
   // Propagate intlData to children
   let childrenWithIntlData = React.Children.map(props.children, (child) => {
-      return React.cloneElement(child, getlocaleData());
+      return React.cloneElement(child, localeData);
   });
 
   return (
@@ -47,8 +46,8 @@ const App = function (props) {
            style={{border: 'none'}}>
          </iframe>
          <nav>
-           <Link to="/en">English</Link>
-           <Link to="/es">Spanish</Link>
+           <Link to="/en">{localeData.messages['english']}</Link>
+           <Link to="/es">{localeData.messages['spanish']}</Link>
          </nav>
        </div>
       </header>

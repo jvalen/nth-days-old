@@ -1,5 +1,7 @@
 {
   "locale": "en",
+  "english": "English",
+  "spanish": "Spanish",
   "days_on_earth": "How many days have you been on Earth?",
   "try_other": "Try other date",
   "calculate": "Calculate",
