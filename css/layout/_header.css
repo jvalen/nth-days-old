@@ -25,12 +25,13 @@ header {
 
 .header__nav {
   text-align: right;
-  color: #551A8B;
+  color: $hearder-nav-color;
 }
 
 .header__a--lang {
   text-decoration: none;
   padding: 0 0.5em;
+  color: $hearder-nav-color;
   &:hover,
   &:focus,
   &:active {

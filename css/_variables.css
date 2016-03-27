@@ -7,6 +7,9 @@ $light-gray-color: #BDBDBD;
 $purple-dark-color: #846FAB;
 $purple-light-color: #8E7DAD;
 
+/* Links */
+$hearder-nav-color: #551A8B;
+
 /* Effects */
 $effects-medium-duration: .5s;
 $effects-active-color: white;
