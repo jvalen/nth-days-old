@@ -4,4 +4,5 @@
 
 .selection__birthday {
   font-weight: bold;
+  font-family: $header-font;
 }
