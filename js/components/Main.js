@@ -29,10 +29,12 @@ const App = function (props) {
   return (
     <div className="main__wrapper">
       <header className="grid">
-        <h1 className="header__h1 grid__col-1-2">
-          <span className="header__nth">nth</span>
-          <span className="header__day"> day</span>
-       </h1>
+        <Link className="header__link-logo" to="/">
+          <h1 className="header__h1 grid__col-1-2">
+            <span className="header__nth">nth</span>
+            <span className="header__day"> day</span>
+          </h1>
+        </Link>
        <div className="header__social grid__col-1-2">
          <iframe
            className="header__github-btn"

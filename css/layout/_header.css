@@ -32,9 +32,7 @@ header {
   text-decoration: none;
   padding: 0 0.5em;
   color: $purple-text-color;
-  &:hover,
-  &:focus,
-  &:active {
+  &:hover {
     color: #CEC3D9;
   }
 }
