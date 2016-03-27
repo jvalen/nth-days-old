@@ -1,12 +1,13 @@
 .matches__result--past {
-  color: #64167A;
+  color: $purple-text-color;
 }
 .matches__result--present {
-  color: #59BD3C;
-  font-size: 1.8em;
+  color: $yellow-light-color;
+  font-size: 1.6em;
+  font-weight: bold;
 }
 .matches__result--future {
-  color: #BDBDBD;
+  color: $light-gray-color;
   font-size: 1.3em;
 }
 

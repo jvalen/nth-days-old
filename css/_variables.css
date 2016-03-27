@@ -2,13 +2,19 @@ $text-font: 'playfair_displayregular', 'Helvetica Neue Light', 'Helvetica Neue',
 $header-font: 'muliregular', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 $code-font: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace;
 
-$text-color: #CCC;
+/* General purpose colors */
 $light-gray-color: #BDBDBD;
 $purple-dark-color: #846FAB;
 $purple-light-color: #8E7DAD;
+$yellow-light-color: #E9EF5C;
 
-/* Links */
-$hearder-nav-color: #551A8B;
+/* Text color*/
+$text-color: #CCC;
+$purple-text-color: #64167A;
+
+/* Buttons */
+$button-modal-bg-color: #64167A;
+$button-modal-hover-color: #846FAB;
 
 /* Effects */
 $effects-medium-duration: .5s;
