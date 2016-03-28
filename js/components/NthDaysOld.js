@@ -52,7 +52,7 @@ class NthDaysOld extends React.Component {
           data-type="month"
           onClick={this.nextStep}
           key={index}
-          value={elem}
+          value={index}
         >
           {elem}
         </button>

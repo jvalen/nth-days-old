@@ -24,7 +24,7 @@ export function pastPresentFuture(time) {
 }
 
 export function buildDate(year, month, day, locale = 'en', format = '') {
-  const date = moment().locale(locale).year(year).month(month).date(day);
+  const date = moment().set({'year': year, 'month': month, 'date': day}).locale('locale');
   return date.format(getMomentFormat(format));
 }
 
