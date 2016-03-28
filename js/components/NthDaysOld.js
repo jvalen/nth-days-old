@@ -122,7 +122,7 @@ class NthDaysOld extends React.Component {
             <input
               ref="yearinput"
               className="nthdaysold__modal-input"
-              type="text"
+              type="tel"
               placeholder="2016"
               autoFocus
             />
