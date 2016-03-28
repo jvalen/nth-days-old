@@ -79,21 +79,8 @@ const Matches = (props) => {
     return result;
   };
 
-  const daysOnEarth = function (data) {
-    const birthday = buildDate(
-      data.year, data.month, data.day,
-      props.locale, false
-    );
-    return daysDifferenceFrom(birthday);
-  };
-
   return (
     <div className="matches">
-      <h2 className="matches__h2">
-        { props.messages.today_is }
-        <span className="matches__nthday">{ daysOnEarth(props.data) }</span>
-         { `${props.messages.day} ${props.messages.on_earth}` }
-       </h2>
       <div className="matches__list">
         <span>{showNth(props.data)}</span>
       </div>

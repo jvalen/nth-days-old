@@ -11,13 +11,6 @@
   font-size: 1.3em;
 }
 
-.matches__nthday {
-  font-family: $header-font;
-  font-size: $text-size-medium;
-  padding: 0 0.2em;
-  color: $light-gray-color;
-}
-
 .matches__list {
   width: 65%;
   margin: 0 auto;
@@ -29,9 +22,4 @@
   margin: 0.4em 0;
   height: 2em;
   /*text-align: left;*/
-}
-
-.matches__h2 {
-  font-weight: normal;
-  padding-bottom: 0.5em;
 }

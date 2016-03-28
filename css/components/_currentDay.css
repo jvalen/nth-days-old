@@ -1,0 +1,11 @@
+.current-day__h2 {
+  font-weight: normal;
+  padding-bottom: 0.5em;
+}
+
+.current-day__nthday {
+  font-family: $header-font;
+  font-size: $text-size-medium;
+  padding: 0 0.2em;
+  color: $light-gray-color;
+}
