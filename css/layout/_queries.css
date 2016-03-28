@@ -33,4 +33,8 @@
   .options__fieldset {
     font-size: 0.8em;
   }
+
+  .current-day__mobile-block {
+    display: block;
+  }
 }

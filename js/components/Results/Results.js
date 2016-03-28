@@ -9,12 +9,12 @@ import Social from './Social';
 const Results = (props) => {
   return (
     <div className="results">
-      <CurrentDay
+      <Selection
         messages={ props.messages }
         locale={ props.locale }
         data={ props.data }
       />
-      <Selection
+      <CurrentDay
         messages={ props.messages }
         locale={ props.locale }
         data={ props.data }

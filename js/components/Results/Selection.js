@@ -4,7 +4,6 @@ import { buildDate } from '../../utils/time';
 const Selection = (props) => {
   return (
     <div className="selection">
-      &#40;
       { props.messages.you_were_born }&nbsp;
       <span className="selection__birthday">
       { buildDate(
@@ -15,7 +14,6 @@ const Selection = (props) => {
           'birthday')
         }
       </span>
-      &#41;
     </div>
   );
 };
