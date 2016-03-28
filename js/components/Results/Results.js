@@ -3,6 +3,7 @@ import Options from './Options';
 import Matches from './Matches';
 import Selection from './Selection';
 import CurrentDay from './CurrentDay';
+import Social from './Social';
 
 
 const Results = (props) => {
@@ -18,9 +19,14 @@ const Results = (props) => {
         locale={ props.locale }
         data={ props.data }
       />
+      <Social
+        messages={ props.messages }
+        locale={ props.locale }
+        data={ props.data }
+      />
       <Options
         messages={ props.messages }
-        locale={ props.locale } 
+        locale={ props.locale }
       />
       <Matches
         messages={ props.messages }

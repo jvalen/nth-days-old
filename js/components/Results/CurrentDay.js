@@ -1,7 +1,6 @@
 import React from 'react';
 import { buildDate, daysDifferenceFrom } from '../../utils/time';
 
-
 const CurrentDay = (props) => {
   const daysOnEarth = function (data) {
     const birthday = buildDate(
@@ -10,6 +9,7 @@ const CurrentDay = (props) => {
     );
     return daysDifferenceFrom(birthday);
   };
+
   return (
     <div className="current-day">
       <h2 className="current-day__h2">
