@@ -71,7 +71,7 @@ module.exports = function(options) {
       loaders: [
         {
           test: /\.json$/,
-          loader: 'json-loader' 
+          loader: 'json-loader'
         },
         {
           test: /\.js$/,
