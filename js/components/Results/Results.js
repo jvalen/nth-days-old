@@ -8,17 +8,20 @@ import CurrentDay from './CurrentDay';
 const Results = (props) => {
   return (
     <div className="results">
-      <Selection
-        messages={ props.messages }
-        locale={ props.locale }
-        data={ props.data }
-      />
       <CurrentDay
         messages={ props.messages }
         locale={ props.locale }
         data={ props.data }
       />
-      <Options />
+      <Selection
+        messages={ props.messages }
+        locale={ props.locale }
+        data={ props.data }
+      />
+      <Options
+        messages={ props.messages }
+        locale={ props.locale } 
+      />
       <Matches
         messages={ props.messages }
         locale={ props.locale }

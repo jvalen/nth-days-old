@@ -10,7 +10,6 @@ const CurrentDay = (props) => {
     );
     return daysDifferenceFrom(birthday);
   };
-  
   return (
     <div className="current-day">
       <h2 className="current-day__h2">

@@ -4,8 +4,7 @@ import {
   buildDate,
   addDaysToDate,
   formatDate,
-  timeDifferenceFormattedFrom,
-  daysDifferenceFrom } from '../../utils/time';
+  timeDifferenceFormattedFrom } from '../../utils/time';
 
 const Matches = (props) => {
   const showNth = function (data) {

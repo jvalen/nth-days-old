@@ -99,15 +99,16 @@ class NthDaysOld extends React.Component {
             { this.props.messages.days_on_earth }
           </h2>
         }
-        <button
-          className="nthdaysold__button--start fade"
-          onClick={this.clickHandler}
-        >
-          { birthdaySet ?
-            this.props.messages.try_other :
-            this.props.messages.calculate
-          }
-        </button>
+        { birthdaySet ?
+          null :
+          <button
+            className="nthdaysold__button--start fade"
+            onClick={this.clickHandler}
+          >
+            {this.props.messages.calculate}
+          </button>
+        }
+
         <Modal
           className="modal"
           ref="yearmodal"
@@ -157,11 +158,19 @@ class NthDaysOld extends React.Component {
           {this.generateDays()}
         </Modal>
         { birthdaySet ?
-          <Results
-            messages={ this.props.messages}
-            locale={ this.props.locale }
-            data={this.props.data}
-          /> : null
+          <div>
+            <Results
+              messages={ this.props.messages}
+              locale={ this.props.locale }
+              data={this.props.data}
+            />
+            <button
+              className="nthdaysold__button--start fade"
+              onClick={this.clickHandler}
+            >
+              {this.props.messages.try_other}
+            </button>
+          </div> : null
         }
       </div>
     );

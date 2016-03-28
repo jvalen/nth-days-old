@@ -37,6 +37,7 @@ const Options = function (props) {
   };
   return (
     <div className="options">
+      <h3 className="options__title">{ props.messages.event_list }:</h3>
       <fieldset className="options__fieldset">
         {generateOptions()}
       </fieldset>

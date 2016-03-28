@@ -2,6 +2,11 @@
   padding: 0.5em 0;
 }
 
+.options__title {
+  color: white;
+  font-weight: normal;
+}
+
 .options__fieldset {
   border: none;
   padding: 0;
