@@ -13,8 +13,8 @@ $text-color: #CCC;
 $purple-text-color: #64167A;
 
 /* Buttons */
-$button-modal-bg-color: #64167A;
-$button-modal-hover-color: #846FAB;
+$button-modal-bg-color: #846FAB;
+$button-modal-hover-color: #64167A;
 
 /* Effects */
 $effects-medium-duration: .5s;
