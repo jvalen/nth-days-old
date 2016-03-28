@@ -21,4 +21,16 @@
   .matches__list {
     width: 100% !important;
   }
+
+  .header__link-logo {
+    font-size: 0.8em;
+  }
+
+  .options__title {
+    font-size: 0.9em;
+  }
+
+  .options__fieldset {
+    font-size: 0.8em;
+  }
 }
