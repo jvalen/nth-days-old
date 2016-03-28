@@ -25,15 +25,15 @@ header {
 
 .header__nav {
   text-align: right;
-  color: $purple-text-color;
+  color: $light-gray-color;
 }
 
 .header__a--lang {
   text-decoration: none;
   padding: 0 0.5em;
-  color: $purple-text-color;
+  color: $light-gray-color;
   &:hover {
-    color: #CEC3D9;
+    color: white;
   }
 }
 
