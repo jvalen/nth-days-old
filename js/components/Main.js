@@ -49,11 +49,11 @@ const App = function (props) {
          >
          </iframe>
          <nav className="header__nav">
-           <Link className="header__a--lang" to="/en">
+           <Link className="header__a--lang" to="/nth/en">
              {localeData.messages.english}
            </Link>
            |
-           <Link className="header__a--lang" to="/es">
+           <Link className="header__a--lang" to="/nth/es">
              {localeData.messages.spanish}
            </Link>
          </nav>
