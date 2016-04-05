@@ -4,6 +4,7 @@ import Matches from './Matches';
 import Selection from './Selection';
 import CurrentDay from './CurrentDay';
 import Social from './Social';
+import Astronaut from './Astronaut';
 
 
 const Results = (props) => {
@@ -19,6 +20,7 @@ const Results = (props) => {
         locale={ props.locale }
         data={ props.data }
       />
+      <Astronaut />
       <Social
         messages={ props.messages }
         locale={ props.locale }
