@@ -15,7 +15,7 @@ const Social = (props) => {
 
   return (
     <div className="social">
-      Share on:
+      {props.messages.share_on}:
       <FacebookButton
         message={ `${props.messages.today_is_my} ${daysOnEarth(props.data)} ${props.messages.day} ${props.messages.on_earth}`}
         url={url}
