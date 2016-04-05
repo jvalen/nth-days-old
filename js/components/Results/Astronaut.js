@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Astronaut = (props) => {
+const Astronaut = () => {
   return (
     <div className="astronaut">
       <div className="astronaut__place-wrapper">
