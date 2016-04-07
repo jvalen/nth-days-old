@@ -11,7 +11,7 @@ const Social = (props) => {
     );
     return daysDifferenceFrom(birthday);
   };
-  const url = 'https://www.jvrpath.com/nth/';
+  const url = 'http://www.jvrpath.com/nth/';
 
   return (
     <div className="social">
