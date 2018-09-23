@@ -65,7 +65,8 @@ module.exports = function(options) {
     entry: entry,
     output: {
       path: path.resolve(__dirname, 'build'),
-      filename: "js/bundle.js"
+      filename: "js/bundle.js",
+      publicPath: ''
     },
     module: {
       loaders: [
