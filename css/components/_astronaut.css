@@ -1,5 +1,5 @@
 .astronaut__place-wrapper {
-  margin: 2em 0;
+  margin: 3em 0 0;
 }
 
 .place__img {
@@ -8,11 +8,91 @@
   animation: moveup 4s cubic-bezier(0.39, 0.575, 0.565, 1) 0.9s infinite normal;
   top: -43px;
   left: -35px;
-  box-shadow: 27px 3px 0 #46e, 30px 3px 0 #46e, 33px 3px 0 #46e, 36px 3px 0 #46e, 18px 6px 0 #0d2, 21px 6px 0 #0d2, 24px 6px 0 #07e, 27px 6px 0 #07e, 30px 6px 0 #07e, 33px 6px 0 #07e, 36px 6px 0 #07e, 39px 6px 0 #1a4, 42px 6px 0 #0d2, 45px 6px 0 #07e, 12px 9px 0 #0d2, 15px 9px 0 #0d2, 18px 9px 0 #1a4, 21px 9px 0 #0d2, 24px 9px 0 #07e, 27px 9px 0 #07e, 30px 9px 0 #07e, 33px 9px 0 #07e, 36px 9px 0 #1a4, 39px 9px 0 #1a4, 42px 9px 0 #46e, 45px 9px 0 #46e, 48px 9px 0 #0d2, 51px 9px 0 #07e, 9px 12px 0 #1a4, 12px 12px 0 #1a4, 15px 12px 0 #0d2, 18px 12px 0 #0d2, 21px 12px 0 #0d2, 24px 12px 0 #07e, 27px 12px 0 #07e, 30px 12px 0 #07e, 33px 12px 0 #07e, 36px 12px 0 #0d2, 39px 12px 0 #0d2, 42px 12px 0 #46e, 45px 12px 0 #07e, 48px 12px 0 #07e, 51px 12px 0 #0d2, 54px 12px 0 #1a4, 9px 15px 0 #1a4, 12px 15px 0 #1a4, 15px 15px 0 #0d2, 18px 15px 0 #0d2, 21px 15px 0 #0d2, 24px 15px 0 #46e, 27px 15px 0 #07e, 30px 15px 0 #07e, 33px 15px 0 #07e, 36px 15px 0 #07e, 39px 15px 0 #46e, 42px 15px 0 #46e, 45px 15px 0 #07e, 48px 15px 0 #0d2, 51px 15px 0 #1a4, 54px 15px 0 #1a4, 6px 18px 0 #46e, 9px 18px 0 #46e, 12px 18px 0 #07e, 15px 18px 0 #0d2, 18px 18px 0 #0d2, 21px 18px 0 #1a4, 24px 18px 0 #46e, 27px 18px 0 #07e, 30px 18px 0 #07e, 33px 18px 0 #07e, 36px 18px 0 #07e, 39px 18px 0 #07e, 42px 18px 0 #07e, 45px 18px 0 #0d2, 48px 18px 0 #0d2, 51px 18px 0 #0d2, 54px 18px 0 #1a4, 57px 18px 0 #1a4, 6px 21px 0 #46e, 9px 21px 0 #46e, 12px 21px 0 #07e, 15px 21px 0 #07e, 18px 21px 0 #0d2, 21px 21px 0 #46e, 24px 21px 0 #46e, 27px 21px 0 #07e, 30px 21px 0 #07e, 33px 21px 0 #07e, 36px 21px 0 #07e, 39px 21px 0 #07e, 42px 21px 0 #0d2, 45px 21px 0 #0d2, 48px 21px 0 #0d2, 51px 21px 0 #0d2, 54px 21px 0 #0d2, 57px 21px 0 #1a4, 6px 24px 0 #46e, 9px 24px 0 #07e, 12px 24px 0 #07e, 15px 24px 0 #07e, 18px 24px 0 #0d2, 21px 24px 0 #0d2, 24px 24px 0 #0d2, 27px 24px 0 #0d2, 30px 24px 0 #07e, 33px 24px 0 #07e, 36px 24px 0 #07e, 39px 24px 0 #07e, 42px 24px 0 #0d2, 45px 24px 0 #1a4, 48px 24px 0 #0d2, 51px 24px 0 #0d2, 54px 24px 0 #0d2, 57px 24px 0 #1a4, 3px 27px 0 #46e, 6px 27px 0 #46e, 9px 27px 0 #07e, 12px 27px 0 #07e, 15px 27px 0 #07e, 18px 27px 0 #0d2, 21px 27px 0 #1a4, 24px 27px 0 #1a4, 27px 27px 0 #1a4, 30px 27px 0 #07e, 33px 27px 0 #07e, 36px 27px 0 #07e, 39px 27px 0 #07e, 42px 27px 0 #1a4, 45px 27px 0 #1a4, 48px 27px 0 #0d2, 51px 27px 0 #0d2, 54px 27px 0 #0d2, 57px 27px 0 #1a4, 60px 27px 0 #1a4, 3px 30px 0 #1a4, 6px 30px 0 #07e, 9px 30px 0 #07e, 12px 30px 0 #07e, 15px 30px 0 #07e, 18px 30px 0 #07e, 21px 30px 0 #0d2, 24px 30px 0 #0d2, 27px 30px 0 #0d2, 30px 30px 0 #07e, 33px 30px 0 #07e, 36px 30px 0 #07e, 39px 30px 0 #07e, 42px 30px 0 #07e, 45px 30px 0 #07e, 48px 30px 0 #0d2, 51px 30px 0 #0d2, 54px 30px 0 #0d2, 57px 30px 0 #1a4, 60px 30px 0 #1a4, 3px 33px 0 #07e, 6px 33px 0 #07e, 9px 33px 0 #07e, 12px 33px 0 #07e, 15px 33px 0 #07e, 18px 33px 0 #07e, 21px 33px 0 #0d2, 24px 33px 0 #0d2, 27px 33px 0 #46e, 30px 33px 0 #46e, 33px 33px 0 #07e, 36px 33px 0 #07e, 39px 33px 0 #07e, 42px 33px 0 #07e, 45px 33px 0 #07e, 48px 33px 0 #07e, 51px 33px 0 #0d2, 54px 33px 0 #0d2, 57px 33px 0 #0d2, 60px 33px 0 #1a4, 3px 36px 0 #07e, 6px 36px 0 #07e, 9px 36px 0 #07e, 12px 36px 0 #07e, 15px 36px 0 #07e, 18px 36px 0 #07e, 21px 36px 0 #0d2, 24px 36px 0 #0d2, 27px 36px 0 #46e, 30px 36px 0 #46e, 33px 36px 0 #07e, 36px 36px 0 #07e, 39px 36px 0 #07e, 42px 36px 0 #07e, 45px 36px 0 #07e, 48px 36px 0 #07e, 51px 36px 0 #07e, 54px 36px 0 #0d2, 57px 36px 0 #0d2, 60px 36px 0 #1a4, 6px 39px 0 #07e, 9px 39px 0 #07e, 12px 39px 0 #07e, 15px 39px 0 #07e, 18px 39px 0 #07e, 21px 39px 0 #07e, 24px 39px 0 #0d2, 27px 39px 0 #46e, 30px 39px 0 #07e, 33px 39px 0 #07e, 36px 39px 0 #07e, 39px 39px 0 #07e, 42px 39px 0 #07e, 45px 39px 0 #07e, 48px 39px 0 #07e, 51px 39px 0 #07e, 54px 39px 0 #1a4, 57px 39px 0 #1a4, 6px 42px 0 #1a4, 9px 42px 0 #1a4, 12px 42px 0 #0d2, 15px 42px 0 #07e, 18px 42px 0 #07e, 21px 42px 0 #07e, 24px 42px 0 #07e, 27px 42px 0 #46e, 30px 42px 0 #07e, 33px 42px 0 #07e, 36px 42px 0 #07e, 39px 42px 0 #07e, 42px 42px 0 #07e, 45px 42px 0 #07e, 48px 42px 0 #07e, 51px 42px 0 #07e, 54px 42px 0 #07e, 57px 42px 0 #1a4, 6px 45px 0 #1a4, 9px 45px 0 #0d2, 12px 45px 0 #46e, 15px 45px 0 #46e, 18px 45px 0 #07e, 21px 45px 0 #07e, 24px 45px 0 #07e, 27px 45px 0 #07e, 30px 45px 0 #07e, 33px 45px 0 #07e, 36px 45px 0 #07e, 39px 45px 0 #07e, 42px 45px 0 #07e, 45px 45px 0 #07e, 48px 45px 0 #07e, 51px 45px 0 #07e, 54px 45px 0 #07e, 57px 45px 0 #1a4, 9px 48px 0 #0d2, 12px 48px 0 #46e, 15px 48px 0 #07e, 18px 48px 0 #07e, 21px 48px 0 #07e, 24px 48px 0 #07e, 27px 48px 0 #07e, 30px 48px 0 #07e, 33px 48px 0 #07e, 36px 48px 0 #07e, 39px 48px 0 #07e, 42px 48px 0 #07e, 45px 48px 0 #07e, 48px 48px 0 #07e, 51px 48px 0 #07e, 54px 48px 0 #46e, 9px 51px 0 #46e, 12px 51px 0 #46e, 15px 51px 0 #07e, 18px 51px 0 #07e, 21px 51px 0 #07e, 24px 51px 0 #07e, 27px 51px 0 #07e, 30px 51px 0 #07e, 33px 51px 0 #07e, 36px 51px 0 #07e, 39px 51px 0 #07e, 42px 51px 0 #07e, 45px 51px 0 #07e, 48px 51px 0 #46e, 51px 51px 0 #46e, 54px 51px 0 #46e, 12px 54px 0 #07e, 15px 54px 0 #07e, 18px 54px 0 #07e, 21px 54px 0 #07e, 24px 54px 0 #07e, 27px 54px 0 #46e, 30px 54px 0 #46e, 33px 54px 0 #46e, 36px 54px 0 #6ba, 39px 54px 0 #6ba, 42px 54px 0 #46e, 45px 54px 0 #46e, 48px 54px 0 #46e, 51px 54px 0 #46e, 18px 57px 0 #07e, 21px 57px 0 #46e, 24px 57px 0 #46e, 27px 57px 0 #46e, 30px 57px 0 #6ba, 33px 57px 0 #6ba, 36px 57px 0 #6ba, 39px 57px 0 #6ba, 42px 57px 0 #6ba, 45px 57px 0 #6ba, 27px 60px 0 #6ba, 30px 60px 0 #6ba, 33px 60px 0 #6ba, 36px 60px 0 #6ba; height: 3px; width: 3px;
+  box-shadow: 27px 3px 0 #46e, 30px 3px 0 #46e, 33px 3px 0 #46e, 36px 3px 0 #46e,
+    18px 6px 0 #0d2, 21px 6px 0 #0d2, 24px 6px 0 #07e, 27px 6px 0 #07e,
+    30px 6px 0 #07e, 33px 6px 0 #07e, 36px 6px 0 #07e, 39px 6px 0 #1a4,
+    42px 6px 0 #0d2, 45px 6px 0 #07e, 12px 9px 0 #0d2, 15px 9px 0 #0d2,
+    18px 9px 0 #1a4, 21px 9px 0 #0d2, 24px 9px 0 #07e, 27px 9px 0 #07e,
+    30px 9px 0 #07e, 33px 9px 0 #07e, 36px 9px 0 #1a4, 39px 9px 0 #1a4,
+    42px 9px 0 #46e, 45px 9px 0 #46e, 48px 9px 0 #0d2, 51px 9px 0 #07e,
+    9px 12px 0 #1a4, 12px 12px 0 #1a4, 15px 12px 0 #0d2, 18px 12px 0 #0d2,
+    21px 12px 0 #0d2, 24px 12px 0 #07e, 27px 12px 0 #07e, 30px 12px 0 #07e,
+    33px 12px 0 #07e, 36px 12px 0 #0d2, 39px 12px 0 #0d2, 42px 12px 0 #46e,
+    45px 12px 0 #07e, 48px 12px 0 #07e, 51px 12px 0 #0d2, 54px 12px 0 #1a4,
+    9px 15px 0 #1a4, 12px 15px 0 #1a4, 15px 15px 0 #0d2, 18px 15px 0 #0d2,
+    21px 15px 0 #0d2, 24px 15px 0 #46e, 27px 15px 0 #07e, 30px 15px 0 #07e,
+    33px 15px 0 #07e, 36px 15px 0 #07e, 39px 15px 0 #46e, 42px 15px 0 #46e,
+    45px 15px 0 #07e, 48px 15px 0 #0d2, 51px 15px 0 #1a4, 54px 15px 0 #1a4,
+    6px 18px 0 #46e, 9px 18px 0 #46e, 12px 18px 0 #07e, 15px 18px 0 #0d2,
+    18px 18px 0 #0d2, 21px 18px 0 #1a4, 24px 18px 0 #46e, 27px 18px 0 #07e,
+    30px 18px 0 #07e, 33px 18px 0 #07e, 36px 18px 0 #07e, 39px 18px 0 #07e,
+    42px 18px 0 #07e, 45px 18px 0 #0d2, 48px 18px 0 #0d2, 51px 18px 0 #0d2,
+    54px 18px 0 #1a4, 57px 18px 0 #1a4, 6px 21px 0 #46e, 9px 21px 0 #46e,
+    12px 21px 0 #07e, 15px 21px 0 #07e, 18px 21px 0 #0d2, 21px 21px 0 #46e,
+    24px 21px 0 #46e, 27px 21px 0 #07e, 30px 21px 0 #07e, 33px 21px 0 #07e,
+    36px 21px 0 #07e, 39px 21px 0 #07e, 42px 21px 0 #0d2, 45px 21px 0 #0d2,
+    48px 21px 0 #0d2, 51px 21px 0 #0d2, 54px 21px 0 #0d2, 57px 21px 0 #1a4,
+    6px 24px 0 #46e, 9px 24px 0 #07e, 12px 24px 0 #07e, 15px 24px 0 #07e,
+    18px 24px 0 #0d2, 21px 24px 0 #0d2, 24px 24px 0 #0d2, 27px 24px 0 #0d2,
+    30px 24px 0 #07e, 33px 24px 0 #07e, 36px 24px 0 #07e, 39px 24px 0 #07e,
+    42px 24px 0 #0d2, 45px 24px 0 #1a4, 48px 24px 0 #0d2, 51px 24px 0 #0d2,
+    54px 24px 0 #0d2, 57px 24px 0 #1a4, 3px 27px 0 #46e, 6px 27px 0 #46e,
+    9px 27px 0 #07e, 12px 27px 0 #07e, 15px 27px 0 #07e, 18px 27px 0 #0d2,
+    21px 27px 0 #1a4, 24px 27px 0 #1a4, 27px 27px 0 #1a4, 30px 27px 0 #07e,
+    33px 27px 0 #07e, 36px 27px 0 #07e, 39px 27px 0 #07e, 42px 27px 0 #1a4,
+    45px 27px 0 #1a4, 48px 27px 0 #0d2, 51px 27px 0 #0d2, 54px 27px 0 #0d2,
+    57px 27px 0 #1a4, 60px 27px 0 #1a4, 3px 30px 0 #1a4, 6px 30px 0 #07e,
+    9px 30px 0 #07e, 12px 30px 0 #07e, 15px 30px 0 #07e, 18px 30px 0 #07e,
+    21px 30px 0 #0d2, 24px 30px 0 #0d2, 27px 30px 0 #0d2, 30px 30px 0 #07e,
+    33px 30px 0 #07e, 36px 30px 0 #07e, 39px 30px 0 #07e, 42px 30px 0 #07e,
+    45px 30px 0 #07e, 48px 30px 0 #0d2, 51px 30px 0 #0d2, 54px 30px 0 #0d2,
+    57px 30px 0 #1a4, 60px 30px 0 #1a4, 3px 33px 0 #07e, 6px 33px 0 #07e,
+    9px 33px 0 #07e, 12px 33px 0 #07e, 15px 33px 0 #07e, 18px 33px 0 #07e,
+    21px 33px 0 #0d2, 24px 33px 0 #0d2, 27px 33px 0 #46e, 30px 33px 0 #46e,
+    33px 33px 0 #07e, 36px 33px 0 #07e, 39px 33px 0 #07e, 42px 33px 0 #07e,
+    45px 33px 0 #07e, 48px 33px 0 #07e, 51px 33px 0 #0d2, 54px 33px 0 #0d2,
+    57px 33px 0 #0d2, 60px 33px 0 #1a4, 3px 36px 0 #07e, 6px 36px 0 #07e,
+    9px 36px 0 #07e, 12px 36px 0 #07e, 15px 36px 0 #07e, 18px 36px 0 #07e,
+    21px 36px 0 #0d2, 24px 36px 0 #0d2, 27px 36px 0 #46e, 30px 36px 0 #46e,
+    33px 36px 0 #07e, 36px 36px 0 #07e, 39px 36px 0 #07e, 42px 36px 0 #07e,
+    45px 36px 0 #07e, 48px 36px 0 #07e, 51px 36px 0 #07e, 54px 36px 0 #0d2,
+    57px 36px 0 #0d2, 60px 36px 0 #1a4, 6px 39px 0 #07e, 9px 39px 0 #07e,
+    12px 39px 0 #07e, 15px 39px 0 #07e, 18px 39px 0 #07e, 21px 39px 0 #07e,
+    24px 39px 0 #0d2, 27px 39px 0 #46e, 30px 39px 0 #07e, 33px 39px 0 #07e,
+    36px 39px 0 #07e, 39px 39px 0 #07e, 42px 39px 0 #07e, 45px 39px 0 #07e,
+    48px 39px 0 #07e, 51px 39px 0 #07e, 54px 39px 0 #1a4, 57px 39px 0 #1a4,
+    6px 42px 0 #1a4, 9px 42px 0 #1a4, 12px 42px 0 #0d2, 15px 42px 0 #07e,
+    18px 42px 0 #07e, 21px 42px 0 #07e, 24px 42px 0 #07e, 27px 42px 0 #46e,
+    30px 42px 0 #07e, 33px 42px 0 #07e, 36px 42px 0 #07e, 39px 42px 0 #07e,
+    42px 42px 0 #07e, 45px 42px 0 #07e, 48px 42px 0 #07e, 51px 42px 0 #07e,
+    54px 42px 0 #07e, 57px 42px 0 #1a4, 6px 45px 0 #1a4, 9px 45px 0 #0d2,
+    12px 45px 0 #46e, 15px 45px 0 #46e, 18px 45px 0 #07e, 21px 45px 0 #07e,
+    24px 45px 0 #07e, 27px 45px 0 #07e, 30px 45px 0 #07e, 33px 45px 0 #07e,
+    36px 45px 0 #07e, 39px 45px 0 #07e, 42px 45px 0 #07e, 45px 45px 0 #07e,
+    48px 45px 0 #07e, 51px 45px 0 #07e, 54px 45px 0 #07e, 57px 45px 0 #1a4,
+    9px 48px 0 #0d2, 12px 48px 0 #46e, 15px 48px 0 #07e, 18px 48px 0 #07e,
+    21px 48px 0 #07e, 24px 48px 0 #07e, 27px 48px 0 #07e, 30px 48px 0 #07e,
+    33px 48px 0 #07e, 36px 48px 0 #07e, 39px 48px 0 #07e, 42px 48px 0 #07e,
+    45px 48px 0 #07e, 48px 48px 0 #07e, 51px 48px 0 #07e, 54px 48px 0 #46e,
+    9px 51px 0 #46e, 12px 51px 0 #46e, 15px 51px 0 #07e, 18px 51px 0 #07e,
+    21px 51px 0 #07e, 24px 51px 0 #07e, 27px 51px 0 #07e, 30px 51px 0 #07e,
+    33px 51px 0 #07e, 36px 51px 0 #07e, 39px 51px 0 #07e, 42px 51px 0 #07e,
+    45px 51px 0 #07e, 48px 51px 0 #46e, 51px 51px 0 #46e, 54px 51px 0 #46e,
+    12px 54px 0 #07e, 15px 54px 0 #07e, 18px 54px 0 #07e, 21px 54px 0 #07e,
+    24px 54px 0 #07e, 27px 54px 0 #46e, 30px 54px 0 #46e, 33px 54px 0 #46e,
+    36px 54px 0 #6ba, 39px 54px 0 #6ba, 42px 54px 0 #46e, 45px 54px 0 #46e,
+    48px 54px 0 #46e, 51px 54px 0 #46e, 18px 57px 0 #07e, 21px 57px 0 #46e,
+    24px 57px 0 #46e, 27px 57px 0 #46e, 30px 57px 0 #6ba, 33px 57px 0 #6ba,
+    36px 57px 0 #6ba, 39px 57px 0 #6ba, 42px 57px 0 #6ba, 45px 57px 0 #6ba,
+    27px 60px 0 #6ba, 30px 60px 0 #6ba, 33px 60px 0 #6ba, 36px 60px 0 #6ba;
+  height: 3px;
+  width: 3px;
 }
 
 @-webkit-keyframes moveup {
-  0%, 60%, 100% {
+  0%,
+  60%,
+  100% {
     transform: scale(1, 1) translateX(0);
   }
   25% {
