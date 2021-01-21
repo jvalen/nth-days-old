@@ -11,5 +11,5 @@ Filter by 10000, 5000 or Repdigit days.
 This application has been built with the following technologies:
 
 - [React](https://facebook.github.io/react/) (UI)
-- [Redux](http://redux.js.org/) (Flux architecture)
-- [Moment.js](http://momentjs.com/) (To handle dates)
+- [Redux](https://redux.js.org/) (Flux architecture)
+- [Moment.js](https://momentjs.com/) (To handle dates)
